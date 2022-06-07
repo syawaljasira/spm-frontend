@@ -1,0 +1,73 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Airbnb Cereal", sans-serif;
+  font-weight: 200;
+  letter-spacing: 1px;
+  list-style-type: none;
+  text-decoration: none;
+  color: var(--color-dark);
+}
+
+:root {
+  --color-primary: #519259;
+  --color-primary-hover: #43834b;
+  --color-primaryLight: #38c172;
+  --color-primaryLight-hover: #2aad61;
+  --color-primaryDark: #064635;
+  --color-primaryDark-hover: #04382a;
+  --color-secondary: #f0bb62;
+  --color-secondary-hover: #e5b156;
+  --color-secondary-light: #f4eea9;
+  --color-success: #1d707a;
+  --color-success-hover: #195e66;
+  --color-danger: #e04669;
+  --color-danger-hover: #ca385a;
+  --color-warning: #f9b143;
+  --color-warning-hover: #e9a135;
+  --color-info: #7970e4;
+  --color-info-hover: #5d54c1;
+  --color-gray: #777777;
+  --color-gray-light: #a5a1a1;
+  --color-gray-hover: #575555;
+  --color-gray-surface: #ebebeb;
+  --color-dark: #3e3c3c;
+  --color-light: #eaeaea;
+  --color-white: #ffffff;
+}
+
+@font-face {
+  font-family: "Airbnb Cereal";
+  src: local("Airbnb Cereal"),
+    url("./fonts/AirbnbCereal_W_Blk.otf") format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Airbnb Cereal";
+  src: local("Airbnb Cereal"),
+    url("./fonts/AirbnbCereal_W_XBd.otf") format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Airbnb Cereal";
+  src: local("Airbnb Cereal"),
+    url("./fonts/AirbnbCereal_W_Md.otf") format("opentype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Airbnb Cereal";
+  src: local("Airbnb Cereal"),
+    url("./fonts/AirbnbCereal_W_Bk.otf") format("opentype");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Airbnb Cereal";
+  src: local("Airbnb Cereal"),
+    url("./fonts/AirbnbCereal_W_Lt.otf") format("opentype");
+  font-weight: 100;
+}

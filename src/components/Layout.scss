@@ -1,0 +1,10 @@
+.layout {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: var(--color-gray-surface);
+
+  .container {
+    padding-top: 13vh;
+    width: 100%;
+  }
+}
