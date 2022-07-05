@@ -1,10 +1,18 @@
 .layout {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
-  background-color: var(--color-gray-surface);
+  overflow-x: hidden;
 
-  .container {
-    padding-top: 13vh;
+  &__container {
+    padding-top: 12vh;
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .layout {
+    &__container {
+      padding-top: 10vh;
+    }
   }
 }

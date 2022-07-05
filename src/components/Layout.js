@@ -2,11 +2,11 @@ import React from "react";
 import "./Layout.scss";
 import Navbar from "./Navbar";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, changeNavbar }) => {
   return (
     <div className="layout">
-      <Navbar />
-      <div className="container">{children}</div>
+      <Navbar changeNavbar={changeNavbar} />
+      <div className="layout__container">{children}</div>
     </div>
   );
 };

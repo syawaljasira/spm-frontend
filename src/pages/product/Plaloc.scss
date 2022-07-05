@@ -1,0 +1,164 @@
+.plaloc {
+  width: 100%;
+  background-color: var(--color-gray-surface);
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+
+  &__main {
+    margin: 2vw auto 10rem;
+    min-height: 80vh;
+    width: 84%;
+    gap: 2vw;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+    border: 1px solid #cecece;
+
+    hr {
+      border-top: 4px solid #cecece;
+    }
+
+    .product__card {
+      padding: 1vw;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2vw 0;
+
+      &-title {
+        width: 100%;
+        font-size: 1.4vw;
+        color: var(--color-primary);
+        font-weight: 400;
+      }
+
+      &-header {
+        width: 28%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1vw;
+
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 12px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+      }
+
+      &-body {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.4vw;
+
+        &-paragraph {
+          width: 80%;
+          font-size: 1vw;
+          color: var(--color-dark);
+          font-weight: 300;
+          line-height: 1.8;
+        }
+
+        &-list {
+          width: 80%;
+          padding-left: 2rem;
+
+          li {
+            font-size: 1vw;
+            font-weight: 300;
+            line-height: 1.8;
+            color: var(--color-dark);
+            list-style-type: disc;
+          }
+        }
+
+        &-item {
+          display: flex;
+          justify-content: space-between;
+
+          h6 {
+            width: 53%;
+            font-size: 1vw;
+            color: var(--color-dark);
+            font-weight: 300;
+          }
+
+          p {
+            width: 50%;
+            font-size: 1vw;
+            color: var(--color-dark);
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .plaloc {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+
+    &__main {
+      width: 90%;
+      margin: 2vw auto 6rem;
+      gap: 2vw;
+
+      hr {
+        border-top: 3px solid #cecece;
+        width: 90%;
+        margin: 0 auto;
+      }
+
+      .product__card {
+        padding: 4vw;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 6vw 0;
+
+        &-title {
+          width: 100%;
+          font-size: 5vw;
+          margin: 0 auto;
+        }
+
+        &-header {
+          width: 100%;
+        }
+
+        &-body {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 0.8rem;
+
+          &-paragraph {
+            width: 100%;
+            font-size: 3.6vw;
+          }
+
+          &-list {
+            width: 100%;
+            padding-left: 1.4rem;
+
+            li {
+              font-size: 3.6vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}

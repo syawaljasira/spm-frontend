@@ -1,0 +1,78 @@
+.ochem {
+  width: 100%;
+  background-color: var(--color-gray-surface);
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+
+  &__main {
+    margin: 0 auto 10rem;
+    min-height: 80vh;
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw 2%;
+
+    &-product-1 {
+      width: 32%;
+      height: auto;
+    }
+
+    &-product-2 {
+      width: 32%;
+      height: auto;
+    }
+
+    &-product-3 {
+      width: 32%;
+      height: auto;
+    }
+
+    &-product-4 {
+      width: 100%;
+      height: auto;
+    }
+
+    &-product-5 {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .ochem {
+    &__main {
+      margin: 2rem auto 6rem;
+      width: 90%;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      gap: 6vw;
+
+      &-product-1 {
+        width: 100%;
+        height: auto;
+      }
+
+      &-product-2 {
+        width: 100%;
+        height: auto;
+      }
+
+      &-product-3 {
+        width: 100%;
+        height: auto;
+      }
+
+      &-product-4 {
+        width: 100%;
+        height: auto;
+      }
+
+      &-product-5 {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.scitech {
+  width: 100%;
+  background-color: var(--color-gray-surface);
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+
+  &__main {
+    margin: 0 auto 10rem;
+    min-height: 80vh;
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2vw 2%;
+
+    &-product {
+      width: 49%;
+      height: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .scitech {
+    gap: 6vw;
+
+    &__main {
+      margin: 2rem auto 6rem;
+      width: 90%;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      gap: 4vw;
+
+      &-product {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

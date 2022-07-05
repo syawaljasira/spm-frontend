@@ -1,34 +1,21 @@
 import React from "react";
-import Layout from "../components/Layout";
 import "./Home.scss";
+import Layout from "../components/Layout";
+import Footer from "../components/Footer";
+import Hero from "../components/Hero";
+import AboutUs from "../components/AboutUs";
+import VisionAndMission from "../components/VisionAndMission";
 
 const Home = () => {
   return (
-    <Layout>
+    <Layout changeNavbar>
       <div className="home">
-        <header className="hero">
-          <div className="hero__left">
-            <span className="hero__left-brand">
-              <span className="line"></span>
-              <h6>PT. SSI Prima Mas</h6>
-            </span>
-            <h1>
-              We Specialized in Providing Product and Services for Flexible
-              Packaging Industries.
-            </h1>
-            <p>
-              <strong>SSI Prima Mas</strong> is company with professional
-              management and always providing excellent service, support and
-              premium quality products.
-            </p>
-          </div>
-          <div className="hero__right">
-            <img
-              src="/images/products/auclean-5s-cnc-sleeve-type-plate-mounter.png"
-              alt="Banner"
-            />
-          </div>
-        </header>
+        <Hero />
+        <main className="home__main">
+          <AboutUs />
+          <VisionAndMission />
+        </main>
+        <Footer />
       </div>
     </Layout>
   );

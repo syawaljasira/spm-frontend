@@ -1,0 +1,212 @@
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 112vh;
+  overflow-x: hidden;
+
+  &__bg {
+    background-color: rgba(0, 0, 0, 0.38);
+    background-blend-mode: color-burn;
+    position: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+  }
+
+  &__content {
+    padding-top: 5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+
+    &-left {
+      width: 46%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.6vw;
+
+      &-btn {
+        width: 90%;
+        display: flex;
+        padding-top: 1vw;
+
+        button {
+          padding: 10px 30px;
+          font-size: 1.2vw;
+          font-weight: 400;
+          background-color: transparent;
+          border: 3px solid var(--color-primaryLight);
+          color: var(--color-primaryLight);
+          border-radius: 30px;
+          cursor: pointer;
+          transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        button:hover {
+          background-color: var(--color-primaryLight);
+          color: var(--color-gray-surface);
+        }
+      }
+
+      &-brand {
+        width: 90%;
+        display: flex;
+        gap: 0.6vw;
+        align-items: center;
+        justify-self: flex-start;
+
+        .line {
+          width: 3vw;
+          border-bottom: 5px solid var(--color-primaryLight);
+        }
+
+        h6 {
+          font-size: 1.2vw;
+          font-weight: 500;
+          color: var(--color-primaryLight);
+        }
+      }
+
+      h1 {
+        width: 90%;
+        font-weight: 500;
+        font-size: 2.9vw;
+        color: var(--color-gray-surface);
+      }
+
+      p {
+        width: 90%;
+        padding-right: 10%;
+        font-weight: 300;
+        font-size: 1.2vw;
+        color: var(--color-gray-surface);
+
+        strong {
+          font-size: 1.1vw;
+          color: var(--color-gray-surface);
+          font-weight: 300;
+        }
+      }
+    }
+
+    &-right {
+      width: 46%;
+      display: flex;
+      justify-content: center;
+
+      &-anim {
+        width: 30vw;
+        height: 30vw;
+        // background-color: rgba($color: #cccccc, $alpha: 0.4);
+        // border-radius: 50%;
+        overflow: hidden;
+
+        div {
+          width: 30vw;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hero {
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    &__bg {
+      background-color: rgba(0, 0, 0, 0.38);
+      background-size: auto 100%;
+      background-position: top right;
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      z-index: -1;
+    }
+
+    &__content {
+      padding-top: 1vw;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+      overflow-x: hidden;
+      gap: 3rem;
+
+      &-left {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2.4vw;
+
+        &-btn {
+          width: 100%;
+          padding-top: 4vw;
+
+          button {
+            padding: 6px 26px;
+            font-size: 3.6vw;
+          }
+        }
+
+        &-brand {
+          width: 100%;
+          gap: 2vw;
+          align-items: center;
+          justify-self: flex-start;
+
+          .line {
+            width: 5vw;
+            border-bottom: 4px solid var(--color-primaryLight);
+          }
+
+          h6 {
+            font-size: 3.6vw;
+          }
+        }
+
+        h1 {
+          width: 100%;
+          font-size: 5vw;
+        }
+
+        p {
+          width: 100%;
+          padding-right: 0;
+          font-size: 3.4vw;
+        }
+      }
+
+      &-right {
+        margin-top: 5rem;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+
+        &-anim {
+          width: 50vw;
+          height: 50vw;
+
+          div {
+            width: 50vw;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}

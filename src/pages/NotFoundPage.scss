@@ -1,0 +1,27 @@
+.notfound {
+  width: 100%;
+  background-color: var(--color-gray-surface);
+
+  &__main {
+    display: flex;
+    width: 60%;
+    min-height: 80vh;
+    padding: 2vw 13vw;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .notfound {
+    width: 100%;
+    background-color: var(--color-gray-surface);
+
+    &__main {
+      display: flex;
+      width: 90%;
+      min-height: 80vh;
+      padding: 2vw 13vw;
+      margin: 0 auto;
+    }
+  }
+}
