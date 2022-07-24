@@ -5,7 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 
 const Navbar = (props) => {
   const { pathname } = useLocation();
-  console.log(pathname);
+
   const [navbar, setNavbar] = useState(false);
   const [showNav, setShowNav] = useState(false);
 

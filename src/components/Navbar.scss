@@ -52,13 +52,16 @@
 
   &__link {
     display: flex;
-    gap: 3vw;
 
     &-item {
       white-space: nowrap;
       font-weight: 300;
       font-size: 1.1vw;
       transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    a {
+      margin-left: 3vw;
     }
   }
 
@@ -90,13 +93,13 @@
 
     &__link {
       display: none;
-      gap: 3vw;
 
       &-item {
         white-space: nowrap;
         font-weight: 300;
         font-size: 1.1vw;
         transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        margin-left: 0;
       }
     }
 
@@ -145,38 +148,12 @@
       }
     }
 
-    &__header {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 5vw;
-
-      h4 {
-        font-size: 6vw;
-        font-weight: 600;
-        color: var(--color-white);
-        padding-bottom: 6vw;
-      }
-
-      &-btn {
-        width: 85%;
-        color: var(--color-success);
-        background-color: var(--color-white);
-        padding: 8px 0;
-        border: none;
-        border-radius: 4px;
-        font-size: 4.2vw;
-        font-weight: 700;
-      }
-    }
-
     &__nav {
       width: 85%;
       margin: 10vw auto 0;
       display: flex;
       flex-direction: column;
-      gap: 6vw;
+      align-items: flex-start;
 
       &-link {
         color: var(--color-white);
@@ -184,6 +161,7 @@
         font-weight: 600;
         border: none;
         text-decoration: none;
+        margin-bottom: 2rem;
       }
     }
   }
