@@ -8,18 +8,12 @@
     padding: 2vw 13vw;
     display: flex;
     flex-direction: column;
-    margin-bottom: 2vw;
 
     h1 {
       font-size: 3vw;
       font-weight: 400;
       color: var(--color-dark);
       margin-bottom: 1rem;
-    }
-
-    p {
-      font-size: 1.2vw;
-      color: var(--color-gray);
     }
   }
 
@@ -86,16 +80,6 @@
       &__btn:hover {
         background-color: var(--color-secondary-hover);
       }
-
-      &__subtitle {
-        width: 90%;
-        display: flex;
-        justify-content: center;
-        font-size: 1vw;
-        color: var(--color-gray);
-        font-weight: 200;
-        height: 8vw;
-      }
     }
 
     .productCard:hover {
@@ -111,14 +95,9 @@
 
     &__header {
       padding: 4vw 6vw;
-      margin-bottom: 0.6rem;
 
       h1 {
         font-size: 6vw;
-      }
-
-      p {
-        font-size: 3.8vw;
       }
     }
 
@@ -156,13 +135,6 @@
           width: 60%;
           font-size: 3.8vw;
           margin-bottom: 1rem;
-        }
-
-        &__subtitle {
-          width: 90%;
-          font-size: 3.8vw;
-          height: auto;
-          padding-bottom: 1rem;
         }
       }
     }

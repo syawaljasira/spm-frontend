@@ -1,6 +1,5 @@
 import React from "react";
 import "./VisionAndMission.scss";
-import { Link } from "react-router-dom";
 
 export default function VisionAndMission() {
   return (
@@ -30,28 +29,16 @@ export default function VisionAndMission() {
             <h4>Our Mission</h4>
           </div>
           <p>
-            Introduce, promote, educate, provide and give satisfaction to
-            customers in the form of premium product quality, on time delivery,
-            training, best support and service in accordance with customer
-            needs.
+            Introducing and delivering values towards our customers in the form
+            of:
           </p>
+          <ul className="mission__content-list">
+            <li>Premium quality product</li>
+            <li>On time delivery</li>
+            <li>Extensive product training</li>
+            <li>Extended product support and services</li>
+          </ul>
         </div>
-      </div>
-      <div className="callback">
-        <h5 className="callback__title">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-          nihil adipisci minima!
-        </h5>
-        <p className="callback__content">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
-          impedit repudiandae, laudantium corporis libero sequi quidem possimus
-          unde, aliquid eum exercitationem veritatis laboriosam velit eius?
-        </p>
-        <span className="callback__btn">
-          <Link to="/products">
-            <button type="button">Check Our Products</button>
-          </Link>
-        </span>
       </div>
     </div>
   );

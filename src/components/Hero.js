@@ -13,10 +13,14 @@ const Hero = () => {
   useEffect(() => {
     const getScrollPosition = () => {
       if (isBrowser) {
-        if (window.scrollY > window.innerHeight) {
-          setChangeBg("primeblade.jpg");
+        if (window.scrollY > 2 * window.innerHeight + 240) {
+          setChangeBg(
+            "http://img2.yun300.cn/repository/image/X6U6cuFbQoaUAaZIPcJBqg.jpg?tenantId=51910&viewType=1"
+          );
+        } else if (window.scrollY > window.innerHeight) {
+          setChangeBg("/images/products/primeblade.jpg");
         } else {
-          setChangeBg("scitech-store.jpg");
+          setChangeBg("/images/products/scitech-store.jpg");
         }
       }
     };
@@ -27,13 +31,14 @@ const Hero = () => {
       window.removeEventListener("scroll", getScrollPosition);
     };
   }, [isBrowser]);
+  // console.log(window.scrollY);
 
   return (
     <header className="hero">
       <div
         className="hero__bg"
         style={{
-          backgroundImage: `url(/images/products/${changeBg})`,
+          backgroundImage: `url(${changeBg})`,
         }}
       ></div>
       <div className="hero__content">
@@ -43,12 +48,11 @@ const Hero = () => {
             <h6>PT. SSI Prima Mas</h6>
           </span>
           <h1>
-            We Specialized in Providing Product and Services for Flexible
+            We Specialized in Supplying Product and Services for the Flexible
             Packaging Industries.
           </h1>
           <p>
-            Professional management and always providing excellent service,
-            support and premium quality products.
+            Providing excellent service, support and premium quality products.
           </p>
           <span className="hero__content-left-btn">
             <Link to="/products">

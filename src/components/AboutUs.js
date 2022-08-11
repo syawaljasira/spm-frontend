@@ -12,42 +12,31 @@ export default function AboutUs() {
       <div className="aboutUs__content">
         <h4>About Us</h4>
         <p>
-          PT. SSI Prima Mas was established in the year 2009. SPM is a trading
-          company specialized in providing product and services for flexible
-          packaging industries. SPM is company with professional management and
-          always providing excellent service, support and premium quality
-          products.
+          Established in the year 2009 PT. SSI Prima Mas is a trading company
+          specializing in supplying product and services for flexible packaging
+          industries.
         </p>
       </div>
       <div className="aboutUs__footer">
         <div className="aboutUs__footer-item footer-item-1">
           <MdEco className="icon-eco" />
           <span>
-            <h4>Lorem, ipsum dolor.</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero
-              iure
-            </p>
+            <h4>Problem</h4>
+            <p>2. Learn and understand problems and needs</p>
           </span>
         </div>
         <div className="aboutUs__footer-item footer-item-2">
           <MdOutlinePrecisionManufacturing className="icon-manufacture" />
           <span>
-            <h4>Lorem, ipsum</h4>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Consequatur
-            </p>
+            <h4>Development</h4>
+            <p>2. Develop a suitable solution and knowledge</p>
           </span>
         </div>
         <div className="aboutUs__footer-item footer-item-3">
           <BsBoxSeam className="icon-box" />
           <span>
-            <h4>Lorem ipsum dolor</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam ad
-              asperiores
-            </p>
+            <h4>Values</h4>
+            <p>3. Deliver necessary values</p>
           </span>
         </div>
       </div>

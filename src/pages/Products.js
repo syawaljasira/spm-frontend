@@ -11,13 +11,6 @@ const Products = () => {
       <div className="products">
         <header className="products__header">
           <h1>Products</h1>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui
-            ducimus doloremque quas cum architecto voluptas aliquam corporis
-            amet quia nobis asperiores dolorum omnis quisquam, natus temporibus
-            repudiandae distinctio consequuntur voluptatibus ad, recusandae
-            maxime nemo? Architecto.
-          </p>
         </header>
         <main className="products__main">
           {PRODUCTS.map((item) => {
@@ -34,7 +27,6 @@ const Products = () => {
                 <Link className="productCard__btn" to={`/product/${item.slug}`}>
                   More info
                 </Link>
-                <p className="productCard__subtitle">{item.subtitle}</p>
               </div>
             );
           })}

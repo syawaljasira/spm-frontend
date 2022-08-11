@@ -6,7 +6,7 @@ import ProductHeader from "../../components/product/ProductHeader";
 
 const Plaloc = () => {
   const subtitle = [
-    "Idemitsu Unitech Co., Ltd. was formed as a new company on April 1, 2000 following the integration of the plastic products business department and Uni Kako Co., Ltd., which was the production department of packing materials.As a result, we successfully integrated the research, production and distribution departments to form a group of plastic processed product specialists. We now commit to our business and our marketing attitude with the motto, \"Quickly respond to our customers' needs for economical efficiency, environment friendliness and convenience by looking from our customers' point of view.\"We, as a company specializing in collaborative value creation, will contribute to society by creating new additional values on the basis of furthering our technical capabilities, mobility and strong partnerships with our customers.",
+    "PLALOC™ is a zipper tape with excellent economic efficiency, functionality, and rationality that meet the needs of today. It allows you to easily reseal the package after each use. You can efficiently use the contents after initial opening without any content's waste.",
   ];
 
   return (
@@ -14,12 +14,14 @@ const Plaloc = () => {
       <div className="plaloc">
         <ProductHeader
           title="Idemitsu Plaloc"
-          image="/images/logo/idemitsu-logo.png"
+          image="https://iconape.com/wp-content/files/op/164360/svg/164360.svg"
           subtitle={subtitle}
         />
         <main className="plaloc__main">
           <div className="product__card">
-            <h3 className="product__card-title">1. Zipper Profiles PLALOC™</h3>
+            <h3 className="product__card-title">
+              1. General Zipper Profiles (For Polyethylene/Polypropylene Film)
+            </h3>
             <span className="product__card-header">
               <img
                 src="/images/products/idemitsu-plaloc-zipper-profiles.png"
@@ -28,18 +30,20 @@ const Plaloc = () => {
             </span>
             <div className="product__card-body">
               <p className="product__card-body-paragraph">
-                That supports a leading brand name of extreme quality. PLALOC™
-                is a zipper tape with excellent economic efficiency,
-                functionality, and rationality that meet the needs of today. It
-                allows you to easily reseal the package after each use. You can
-                efficiently use the contents after initial opening without any
-                content's waste.
+                Zipper tape for both polyethylene and polypropylene film with
+                special sealing layer.
               </p>
+              <ul className="product__card-body-list">
+                <li>Super low temp. sealability</li>
+                <li>Anti wrinkle by melting gap(Sealant & Main layer)</li>
+                <li>High rigidity (Hard to deform, Good snap)</li>
+                <li>Sealable for both sealant</li>
+              </ul>
             </div>
           </div>
           <hr />
           <div className="product__card">
-            <h3 className="product__card-title">2. PLALOC™ Pocket Zip™</h3>
+            <h3 className="product__card-title">2. POCKETZIP™</h3>
             <span className="product__card-header">
               <img
                 src="/images/products/idemitsu-plaloc-pocketzip.png"
@@ -48,35 +52,56 @@ const Plaloc = () => {
             </span>
             <div className="product__card-body">
               <p className="product__card-body-paragraph">
-                Our patented technology, Front panel zipper POCKETZIP™.
-                POCKETZIP™ is even when opening the pouch, excellent in pouch
-                design because the upper part of the bag remains. New shaped
-                pouch with one-side structure and a pocket open. Almost no load
-                is added to a zipper part ensures that Applicable to heavy,
+                Excellent in pouch design with POCKETZIP techonology. Almost no
+                load is added to a zipper part ensures that Applicable to heavy,
                 powder products.
               </p>
-              <p className="product__card-body-paragraph"></p>
               <ul className="product__card-body-list">
                 <li>
                   Easy Open, Tab pulled off over zipper, No need to use scissors
                 </li>
                 <li>Easy top filling behind the zipper</li>
               </ul>
+              <p className="product__card-body-paragraph">Linear Tear Zipper</p>
+              <p className="product__card-body-paragraph">
+                A special cut tape which enables linear opening simply by
+                attaching to a bag.
+              </p>
+              <ul className="product__card-body-list">
+                <li>
+                  Linear tear due to design of zipper (Idemitsu Unitech patented
+                  technology)
+                </li>
+                <li>Does not rely on film properties</li>
+                <li>
+                  No need for laser perforation. No damage to the film; No
+                  leakage
+                </li>
+              </ul>
             </div>
           </div>
           <hr />
           <div className="product__card">
-            <h3 className="product__card-title">3. Easy-opening UNICUT</h3>
+            <h3 className="product__card-title">
+              3. PLALOC™ Eco-friendly zipper
+            </h3>
             <span className="product__card-header">
               <img
-                src="/images/products/idemitsu-plaloc-easy-opening-unicut.png"
+                src="https://www.idemitsu.com/en/content/100031196.jpg"
                 alt="Plaloc Product 3"
               />
             </span>
             <div className="product__card-body">
               <p className="product__card-body-paragraph">
-                This is special cut tape which enables linear opening simply by
-                attaching to a bag.
+                Plastic packaging is an essential for "reduction of food loss".
+                On the other hand, as the problem of marine plastic waste is
+                raised, Idemitsu Unitech has positioned the reduction of
+                environmental impact as one of the most important issues for
+                packaging material manufacturers and is actively working on it.
+              </p>
+              <p className="product__card-body-paragraph">
+                PLALOC™ Eco-friendly zipper has Recyclable", "Biomass", and
+                "Biodegradability" features
               </p>
             </div>
           </div>

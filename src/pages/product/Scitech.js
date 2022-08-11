@@ -6,11 +6,7 @@ import ProductHeader from "../../components/product/ProductHeader";
 
 const Scitech = () => {
   const subtitle = [
-    "Founded in 2002 out of Flint, Wales, Scitech Adhesive Systems specialise in polymer technology and manufacture high-performance adhesives and coatings. We work with our customers to create tailored products by offering a complete design and development service.",
-
-    "Our vast experience and evolving expertise allow us to solve your problems efficiently and successfully. We provide assistance with product trials and offer a complete design and build service.",
-
-    "As well as having vast experience in standard adhesives and coatings, Scitech have become one of the leading formulators of compostable adhesives and coatings for a range of different markets.",
+    "Specializing in polymer technology and manufacture of high-performance adhesives and coatings. With vast experience in standard adhesives and coatings, Scitech have become one of the leading formulators of compostable adhesives and coatings for a range of different markets.",
   ];
 
   return (

@@ -13,6 +13,26 @@ const Navbar = (props) => {
     setShowNav(!showNav);
   };
 
+  const handleAboutUs = () => {
+    setTimeout(() => {
+      window.scrollTo({
+        top: window.innerHeight,
+        left: 0,
+        behavior: "smooth",
+      });
+    }, 200);
+  };
+
+  const handleAboutUsMobile = () => {
+    setTimeout(() => {
+      window.scrollTo({
+        top: window.innerHeight - window.innerHeight * 0.1,
+        left: 0,
+        behavior: "smooth",
+      });
+    }, 200);
+  };
+
   const isBrowser = typeof window !== "undefined";
 
   useEffect(() => {
@@ -52,15 +72,21 @@ const Navbar = (props) => {
         <Link to="/">
           <li className="navbar__link-item">Home</li>
         </Link>
-        <a href="/#about-us">
-          <li className="navbar__link-item">About Us</li>
-        </a>
+        {pathname === "/" ? (
+          <a href="/#about-us">
+            <li className="navbar__link-item">About Us</li>
+          </a>
+        ) : (
+          <Link onClick={handleAboutUs} to="/">
+            <li className="navbar__link-item">About Us</li>
+          </Link>
+        )}
         <Link to="/products">
           <li className="navbar__link-item">Products</li>
         </Link>
-        <a href="#contact">
+        <Link to="/contact">
           <li className="navbar__link-item">Contact</li>
-        </a>
+        </Link>
       </ul>
       <MdMenu className="navbar__menu" onClick={toggleNav} />
       <div className={`offcanvas ${showNav ? "show-nav" : "hidden-nav"}`}>
@@ -75,7 +101,14 @@ const Navbar = (props) => {
             Home
           </Link>
           {pathname !== "/" ? (
-            <Link onClick={toggleNav} className="offcanvas__nav-link" to="/">
+            <Link
+              onClick={() => {
+                toggleNav();
+                handleAboutUsMobile();
+              }}
+              className="offcanvas__nav-link"
+              to="/"
+            >
               About Us
             </Link>
           ) : (
@@ -94,13 +127,13 @@ const Navbar = (props) => {
           >
             Products
           </Link>
-          <a
+          <Link
             onClick={toggleNav}
             className="offcanvas__nav-link"
-            href="#contact"
+            to="/contact"
           >
             Contact
-          </a>
+          </Link>
         </div>
       </div>
     </nav>

@@ -6,11 +6,7 @@ import ProductHeader from "../../components/product/ProductHeader";
 
 const Primeblade = () => {
   const subtitle = [
-    "PrimeBlade Sweden AB is a global manufacturer and supplier of Doctor Blades for flexo, gravure, offset printers, and coating applications. Together with our Swedish raw material supplier and end users the doctor blade was produced to improve production quality, blade life, and to increase machine speeds.",
-
-    "Our Doctor Blades are available in all different edge types, standard thicknesses and widths. They are supplied in 100 meter / 328 foot rolls in easy-to-use cassettes, or cut in lengths to meet your needs.",
-
-    "The pre-ground blades have radius-ground edges, enhancing blade functionality. The blade and cylinders last longer than conventional blades. The pressure exerted by the blade on the cylinders is constant, eliminating uneven blade wear.",
+    "A global manufacturer and supplier of Doctor Blades for flexo, gravure, offset printers, and coating applications. Together with Swedish raw material supplier and end users the doctor blade was produced to improve production quality, blade life, and to increase machine speeds.",
   ];
 
   return (

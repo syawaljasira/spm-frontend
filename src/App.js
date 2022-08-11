@@ -11,6 +11,7 @@ import Scitech from "./pages/product/Scitech";
 import Plaloc from "./pages/product/Plaloc";
 import ScrollToTop from "./components/ScrollToTop";
 import NotFoundPage from "./pages/NotFoundPage";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/products" element={<Products />} />
 
         {/* Products Page */}

@@ -1,0 +1,223 @@
+.contact {
+  width: 100%;
+  background-color: var(--color-gray-surface);
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    min-height: 76vh;
+    padding: 5vh 8vw 0;
+    margin: 0 auto 1vw;
+
+    &-maps {
+      width: 32%;
+      display: flex;
+      flex-direction: column;
+      padding-top: 1rem;
+      border-top: 4px solid var(--color-danger);
+
+      .maps__title {
+        font-size: 1.5vw;
+        font-weight: 500;
+        color: var(--color-primary);
+        letter-spacing: 2px;
+        text-align: center;
+        margin-bottom: 1vw;
+      }
+
+      .maps__iframe {
+        width: 100%;
+        height: 50vh;
+        border: 0;
+      }
+    }
+
+    &-address {
+      width: 32%;
+      display: flex;
+      flex-direction: column;
+      padding-top: 1rem;
+      border-top: 4px solid var(--color-info);
+
+      .address__title {
+        font-size: 1.5vw;
+        font-weight: 500;
+        color: var(--color-primary);
+        letter-spacing: 2px;
+        text-align: center;
+        margin-bottom: 1vw;
+      }
+
+      &-item {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 4vh 1.2vw;
+
+        h5 {
+          font-size: 1.25vw;
+          font-weight: 500;
+          color: var(--color-dark);
+          letter-spacing: 2px;
+          margin-bottom: 1vw;
+        }
+
+        address {
+          text-align: center;
+          width: 95%;
+          font-size: 1.1vw;
+          font-weight: 300;
+          color: var(--color-dark);
+          letter-spacing: 1.2px;
+        }
+      }
+    }
+
+    &-telp {
+      width: 32%;
+      display: flex;
+      flex-direction: column;
+      padding-top: 1rem;
+      border-top: 4px solid var(--color-secondary);
+
+      .telp__title {
+        font-size: 1.5vw;
+        font-weight: 500;
+        color: var(--color-primary);
+        letter-spacing: 2px;
+        text-align: center;
+        margin-bottom: 1vw;
+      }
+
+      .telp__phone {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5vw 1vw;
+        width: 95%;
+        margin: 0 auto;
+
+        &-icon {
+          font-size: 1.8vw;
+          color: var(--color-dark);
+          margin-right: 1rem;
+        }
+
+        &-value {
+          width: 100%;
+          font-size: 1.2vw;
+          font-weight: 300;
+          color: var(--color-dark);
+          letter-spacing: 1.2px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .contact {
+    width: 100%;
+    background-color: var(--color-gray-surface);
+
+    &__main {
+      display: flex;
+      width: 90%;
+      min-height: 80vh;
+      padding: 1rem;
+      margin: 0 auto;
+
+      flex-direction: column;
+
+      &-maps {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+
+        .maps__title {
+          font-size: 6vw;
+          margin-bottom: 1rem;
+        }
+
+        .maps__iframe {
+          width: 100%;
+          height: 35vh;
+        }
+      }
+
+      &-address {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+
+        .address__title {
+          font-size: 6vw;
+          margin-bottom: 1rem;
+        }
+
+        &-item {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 4vh 1.2vw;
+
+          h5 {
+            font-size: 4.5vw;
+            margin-bottom: 0.6rem;
+          }
+
+          address {
+            text-align: center;
+            width: 95%;
+            font-size: 3.8vw;
+          }
+        }
+      }
+
+      &-telp {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+
+        .telp__title {
+          font-size: 6vw;
+          margin-bottom: 1rem;
+        }
+
+        .telp__phone {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          padding: 0.6rem;
+          margin: 0 auto;
+
+          &-icon {
+            font-size: 4.8vw;
+            color: var(--color-dark);
+            margin-right: 0.7rem;
+          }
+
+          &-value {
+            font-size: 3.8vw;
+            font-weight: 300;
+            color: var(--color-dark);
+            letter-spacing: 1.2px;
+          }
+        }
+      }
+    }
+  }
+}
