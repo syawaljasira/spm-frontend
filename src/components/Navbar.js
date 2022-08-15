@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Navbar.scss";
 import { MdMenu, MdOutlineClose } from "react-icons/md";
 import { Link, useLocation } from "react-router-dom";
@@ -6,11 +6,18 @@ import { Link, useLocation } from "react-router-dom";
 const Navbar = (props) => {
   const { pathname } = useLocation();
 
-  const [navbar, setNavbar] = useState(false);
   const [showNav, setShowNav] = useState(false);
 
   const toggleNav = () => {
     setShowNav(!showNav);
+  };
+
+  const scrollUp = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
   };
 
   const handleAboutUs = () => {
@@ -33,43 +40,15 @@ const Navbar = (props) => {
     }, 200);
   };
 
-  const isBrowser = typeof window !== "undefined";
-
-  useEffect(() => {
-    const changeBgNavbar = () => {
-      if (isBrowser) {
-        if (window.scrollY >= 5) {
-          setNavbar(true);
-        } else {
-          setNavbar(false);
-        }
-      }
-    };
-
-    window.addEventListener("scroll", changeBgNavbar);
-
-    return () => {
-      window.removeEventListener("scroll", changeBgNavbar);
-    };
-  }, [isBrowser]);
-
   return (
-    <nav
-      className={`navbar ${
-        props.changeNavbar
-          ? navbar
-            ? "navbar-light"
-            : "navbar-transparent"
-          : "navbar-light"
-      }`}
-    >
+    <nav className="navbar navbar-light">
       <span className="navbar__brand">
-        <Link to="/">
+        <Link onClick={scrollUp} to="/">
           <img src="/logo192.png" alt="SPM Brand" />
         </Link>
       </span>
       <ul className="navbar__link">
-        <Link to="/">
+        <Link onClick={scrollUp} to="/">
           <li className="navbar__link-item">Home</li>
         </Link>
         {pathname === "/" ? (

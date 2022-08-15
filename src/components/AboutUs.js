@@ -12,7 +12,7 @@ export default function AboutUs() {
       <div className="aboutUs__content">
         <h4>About Us</h4>
         <p>
-          Established in the year 2009 PT. SSI Prima Mas is a trading company
+          Established in the year 2009, PT. SSI Prima Mas is a trading company
           specializing in supplying product and services for flexible packaging
           industries.
         </p>
@@ -21,8 +21,8 @@ export default function AboutUs() {
         <div className="aboutUs__footer-item footer-item-1">
           <MdEco className="icon-eco" />
           <span>
-            <h4>Problem</h4>
-            <p>2. Learn and understand problems and needs</p>
+            <h4>Issues</h4>
+            <p>1. Learn and understand problems and needs</p>
           </span>
         </div>
         <div className="aboutUs__footer-item footer-item-2">

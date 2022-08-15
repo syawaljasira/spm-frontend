@@ -6,21 +6,27 @@ import packagingAnimation from "../animation/packaging-delivery.json";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
-  const [changeBg, setChangeBg] = useState("scitech-store.jpg");
+  const [changeBg, setChangeBg] = useState(1);
 
   const isBrowser = typeof window !== "undefined";
 
   useEffect(() => {
     const getScrollPosition = () => {
-      if (isBrowser) {
+      if (isBrowser && window.innerWidth > 992) {
         if (window.scrollY > 2 * window.innerHeight + 240) {
-          setChangeBg(
-            "http://img2.yun300.cn/repository/image/X6U6cuFbQoaUAaZIPcJBqg.jpg?tenantId=51910&viewType=1"
-          );
+          setChangeBg(3);
         } else if (window.scrollY > window.innerHeight) {
-          setChangeBg("/images/products/primeblade.jpg");
+          setChangeBg(2);
         } else {
-          setChangeBg("/images/products/scitech-store.jpg");
+          setChangeBg(1);
+        }
+      } else {
+        if (window.scrollY > 2 * window.innerHeight + 240) {
+          setChangeBg(3);
+        } else if (window.scrollY > window.innerHeight) {
+          setChangeBg(2);
+        } else {
+          setChangeBg(1);
         }
       }
     };
@@ -31,14 +37,28 @@ const Hero = () => {
       window.removeEventListener("scroll", getScrollPosition);
     };
   }, [isBrowser]);
-  // console.log(window.scrollY);
 
   return (
     <header className="hero">
       <div
         className="hero__bg"
         style={{
-          backgroundImage: `url(${changeBg})`,
+          backgroundImage: `url(/images/products/scitech-store.jpg)`,
+          display: changeBg === 1 ? "block" : "none",
+        }}
+      ></div>
+      <div
+        className="hero__bg"
+        style={{
+          backgroundImage: `url(/images/products/primeblade.jpg)`,
+          display: changeBg === 2 ? "block" : "none",
+        }}
+      ></div>
+      <div
+        className="hero__bg"
+        style={{
+          backgroundImage: `url(http://img2.yun300.cn/repository/image/X6U6cuFbQoaUAaZIPcJBqg.jpg?tenantId=51910&viewType=1)`,
+          display: changeBg === 3 ? "block" : "none",
         }}
       ></div>
       <div className="hero__content">

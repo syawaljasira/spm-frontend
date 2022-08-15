@@ -62,7 +62,18 @@ const Plaloc = () => {
                 </li>
                 <li>Easy top filling behind the zipper</li>
               </ul>
-              <p className="product__card-body-paragraph">Linear Tear Zipper</p>
+            </div>
+          </div>
+          <hr />
+          <div className="product__card">
+            <h3 className="product__card-title">3. Linear Tear Zipper</h3>
+            <span className="product__card-header">
+              <img
+                src="https://www.idemitsu.com/en/content/100031195.jpg"
+                alt="Plaloc Product 3"
+              />
+            </span>
+            <div className="product__card-body">
               <p className="product__card-body-paragraph">
                 A special cut tape which enables linear opening simply by
                 attaching to a bag.
@@ -83,12 +94,12 @@ const Plaloc = () => {
           <hr />
           <div className="product__card">
             <h3 className="product__card-title">
-              3. PLALOC™ Eco-friendly zipper
+              4. PLALOC™ Eco-friendly zipper
             </h3>
             <span className="product__card-header">
               <img
                 src="https://www.idemitsu.com/en/content/100031196.jpg"
-                alt="Plaloc Product 3"
+                alt="Plaloc Product 4"
               />
             </span>
             <div className="product__card-body">

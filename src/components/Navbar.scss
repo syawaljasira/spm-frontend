@@ -1,17 +1,3 @@
-.navbar-transparent {
-  background-color: transparent;
-
-  .navbar__link {
-    &-item {
-      color: var(--color-gray-surface);
-    }
-  }
-
-  .navbar__menu {
-    color: var(--color-gray-surface);
-  }
-}
-
 .navbar-light {
   background-color: var(--color-gray-surface);
 

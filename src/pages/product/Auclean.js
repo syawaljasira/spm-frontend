@@ -39,7 +39,7 @@ const Auclean = () => {
               </div>
               <div className="product__card-body-item">
                 <h6>Maximum diameter of the plate roll (circumference)</h6>
-                <p>: ?446 mm</p>
+                <p>: 446 mm</p>
               </div>
               <div className="product__card-body-item">
                 <h6>Machine Size</h6>
