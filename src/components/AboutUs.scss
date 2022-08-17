@@ -102,6 +102,12 @@
   }
 }
 
+@media screen and (max-width: 992px) {
+  .aboutUs {
+    margin-bottom: 0;
+  }
+}
+
 @media screen and (max-width: 576px) {
   .aboutUs {
     display: flex;

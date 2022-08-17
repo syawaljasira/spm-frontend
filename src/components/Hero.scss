@@ -123,6 +123,17 @@
   }
 }
 
+@media screen and (max-width: 992px) {
+  .hero {
+    &__bg {
+      display: flex;
+      align-items: flex-start;
+      background-size: 100% auto;
+      background-attachment: fixed;
+    }
+  }
+}
+
 @media screen and (max-width: 576px) {
   .hero {
     min-height: 100vh;
