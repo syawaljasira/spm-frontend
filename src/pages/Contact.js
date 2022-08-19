@@ -17,9 +17,9 @@ const Contact = () => {
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d991.4491844390938!2d107.0445237!3d-6.2904254!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698e285e9447e5%3A0xa316d14ffc8fbd09!2sSSI%20Prima%20Mas!5e0!3m2!1sid!2sid!4v1660581271875!5m2!1sid!2sid"
               width="600"
               height="450"
-              allowfullscreen=""
+              allowFullScreen=""
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
+              referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
           <div className="contact__main-address">
@@ -63,7 +63,7 @@ const Contact = () => {
             </div>
           </div>
         </main>
-        <Footer />
+        <Footer no_address />
       </div>
     </Layout>
   );

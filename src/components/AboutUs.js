@@ -22,21 +22,21 @@ export default function AboutUs() {
           <MdEco className="icon-eco" />
           <span>
             <h4>Issues</h4>
-            <p>1. Learn and understand problems and needs</p>
+            <p>Learn and understand problems and needs</p>
           </span>
         </div>
         <div className="aboutUs__footer-item footer-item-2">
           <MdOutlinePrecisionManufacturing className="icon-manufacture" />
           <span>
             <h4>Development</h4>
-            <p>2. Develop a suitable solution and knowledge</p>
+            <p>Develop a suitable solution and knowledge</p>
           </span>
         </div>
         <div className="aboutUs__footer-item footer-item-3">
           <BsBoxSeam className="icon-box" />
           <span>
             <h4>Values</h4>
-            <p>3. Deliver necessary values</p>
+            <p>Deliver necessary values</p>
           </span>
         </div>
       </div>
