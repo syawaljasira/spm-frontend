@@ -26,7 +26,7 @@ const Footer = ({ no_address }) => {
       )}
 
       <p className="footer__copyright">
-        Copyright &copy; 2021 PT. SSI Prima Mas. All Rights Reserved
+        Copyright &copy; 2022 PT. SSI Prima Mas. All Rights Reserved
       </p>
     </footer>
   );
