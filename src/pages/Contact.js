@@ -33,18 +33,10 @@ const Contact = () => {
             </div>
 
             <div className="contact__main-address-item">
-              <h5>Surabaya Branch</h5>
-              <address>
-                Jl. Simo Tambaan Sekolahan No.61F Surabaya - Jawa Timur 60181
-                Indonesia
-              </address>
-            </div>
-
-            <div className="contact__main-address-item">
               <h5>Showroom & Warehouse</h5>
               <address>
                 Jababeka 2 Industrial Estate Jl. Industri Selatan Blok HH No.
-                05, Pasir Sari Cikarang - Bekasi Indonesia
+                15, Pasir Sari Cikarang - Bekasi Indonesia
               </address>
             </div>
           </div>

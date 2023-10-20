@@ -18,7 +18,7 @@ const Footer = ({ no_address }) => {
           <div className="footer__address-item">
             <h5>Showroom & Warehouse</h5>
             <address>
-              Jababeka 2 Industrial Estate Jl. Industri Selatan Blok HH No. 05,
+              Jababeka 2 Industrial Estate Jl. Industri Selatan Blok HH No. 15,
               Pasir Sari Cikarang - Bekasi Indonesia
             </address>
           </div>
@@ -26,7 +26,8 @@ const Footer = ({ no_address }) => {
       )}
 
       <p className="footer__copyright">
-        Copyright &copy; 2022 PT. SSI Prima Mas. All Rights Reserved
+        Copyright &copy; {new Date(Date.now()).getFullYear()} PT. SSI Prima Mas.
+        All Rights Reserved
       </p>
     </footer>
   );
