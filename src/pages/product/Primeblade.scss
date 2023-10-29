@@ -4,6 +4,34 @@
   display: flex;
   flex-direction: column;
 
+  .player_wrapper {
+    width: auto;
+    height: 68vh;
+    position: relative;
+    left: 0;
+    top: 0;
+    object-position: center;
+    object-fit: contain;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: -1rem;
+
+    .react-player {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+
+      iframe {
+        border-radius: 12px !important;
+      }
+    }
+  }
+
   &__main {
     min-height: 80vh;
     margin: 4rem auto 6rem;
@@ -30,6 +58,17 @@
       img {
         width: 100%;
         height: auto;
+      }
+    }
+
+    &-product:hover {
+      img {
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        transform: scale(1.02);
+        -webkit-transform: scale(1.02);
+        -moz-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+        -o-transform: scale(1.02);
       }
     }
   }

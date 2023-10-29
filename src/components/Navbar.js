@@ -42,7 +42,7 @@ const Navbar = (props) => {
 
   return (
     <nav className="navbar navbar-light">
-      <span className="navbar__brand">
+      <span className="navbar__brand flex">
         <Link onClick={scrollUp} to="/">
           <img src="/logo192.png" alt="SPM Brand" />
         </Link>
