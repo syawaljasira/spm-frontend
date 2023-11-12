@@ -1,10 +1,26 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./Huitong.scss";
 import Footer from "../../components/Footer";
 import Layout from "../../components/Layout";
 import ProductHeader from "../../components/product/ProductHeader";
+import { useInView } from "framer-motion";
+
+const animation = (isInView, delay) => {
+  let style = {
+    opacity: isInView ? 1 : 0,
+    transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${delay + 0.4}s`,
+  };
+  return style;
+};
 
 const Huitong = () => {
+  const ref = useRef(null);
+  const ref2 = useRef(null);
+  const ref3 = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const isInView2 = useInView(ref2, { once: true });
+  const isInView3 = useInView(ref3, { once: true });
+
   const subtitle = [
     "The largest manufacturer of flexible packing and printing equipment in China, majoring advanced series of soft packaging.",
   ];
@@ -17,8 +33,8 @@ const Huitong = () => {
           image="/images/logo/huitong-logo.png"
           subtitle={subtitle}
         />
-        <main className="huitong__main">
-          <div className="product__card">
+        <main ref={ref} className="huitong__main">
+          <div style={animation(isInView, 0.5)} className="product__card">
             <h3 className="product__card-title">
               1. HuiTong HT Bag Making Machine
             </h3>
@@ -71,8 +87,10 @@ const Huitong = () => {
               </div>
             </div>
           </div>
-          <hr />
-          <div className="product__card">
+
+          <hr ref={ref2} />
+
+          <div style={animation(isInView2, 0.1)} className="product__card">
             <h3 className="product__card-title">
               2. HuiTong Laminating Machine
             </h3>
@@ -101,8 +119,10 @@ const Huitong = () => {
               </div>
             </div>
           </div>
-          <hr />
-          <div className="product__card">
+
+          <hr ref={ref3} />
+
+          <div style={animation(isInView3, 0.1)} className="product__card">
             <h3 className="product__card-title">
               3. HuiTong Printing Press Machine
             </h3>

@@ -1,10 +1,26 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./Auclean.scss";
 import Footer from "../../components/Footer";
 import Layout from "../../components/Layout";
 import ProductHeader from "../../components/product/ProductHeader";
+import { useInView } from "framer-motion";
+
+const animation = (isInView, delay) => {
+  let style = {
+    opacity: isInView ? 1 : 0,
+    transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${delay + 0.4}s`,
+  };
+  return style;
+};
 
 const Auclean = () => {
+  const ref = useRef(null);
+  const ref2 = useRef(null);
+  const ref3 = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const isInView2 = useInView(ref2, { once: true });
+  const isInView3 = useInView(ref3, { once: true });
+
   const subtitle = [
     "Concentrating on researching and producing premium plater mounter, chamber doctor blade system, anilox cleaning machine and other printing supporting equipment.",
   ];
@@ -17,8 +33,8 @@ const Auclean = () => {
           image="/images/logo/auclean-logo.png"
           subtitle={subtitle}
         />
-        <main className="auclean__main">
-          <div className="product__card">
+        <main ref={ref} className="auclean__main">
+          <div style={animation(isInView, 0.5)} className="product__card">
             <h3 className="product__card-title">
               1. 5S Sleeve Type (Cantilever) Press Machine
             </h3>
@@ -51,8 +67,10 @@ const Auclean = () => {
               </div>
             </div>
           </div>
-          <hr />
-          <div className="product__card">
+
+          <hr ref={ref2} />
+
+          <div style={animation(isInView2, 0.1)} className="product__card">
             <h3 className="product__card-title">
               2. AC-2100WW High Pressure Water Roller Cleaner
             </h3>
@@ -97,8 +115,10 @@ const Auclean = () => {
               </div>
             </div>
           </div>
-          <hr />
-          <div className="product__card">
+
+          <hr ref={ref3} />
+
+          <div style={animation(isInView3, 0.1)} className="product__card">
             <h3 className="product__card-title">3. Chamber Docter</h3>
             <span className="product__card-header">
               <img

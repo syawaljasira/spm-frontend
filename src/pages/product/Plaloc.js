@@ -1,10 +1,33 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./Plaloc.scss";
 import Footer from "../../components/Footer";
 import Layout from "../../components/Layout";
 import ProductHeader from "../../components/product/ProductHeader";
+import { useInView } from "framer-motion";
+
+const animation = (isInView, delay) => {
+  let style = {
+    transform: isInView ? "none" : "translateX(-30px)",
+    WebkitTransform: isInView ? "none" : "translateX(-30px)",
+    MozTransform: isInView ? "none" : "translateX(-30px)",
+    msTransform: isInView ? "none" : "translateX(-30px)",
+    OTransform: isInView ? "none" : "translateX(-30px)",
+    opacity: isInView ? 1 : 0,
+    transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${delay + 0.4}s`,
+  };
+  return style;
+};
 
 const Plaloc = () => {
+  const ref = useRef(null);
+  const ref2 = useRef(null);
+  const ref3 = useRef(null);
+  const ref4 = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const isInView2 = useInView(ref2, { once: true });
+  const isInView3 = useInView(ref3, { once: true });
+  const isInView4 = useInView(ref4, { once: true });
+
   const subtitle = [
     "PLALOC™ is a zipper tape with excellent economic efficiency, functionality, and rationality that meet the needs of today. It allows you to easily reseal the package after each use. You can efficiently use the contents after initial opening without any content's waste.",
   ];
@@ -17,8 +40,8 @@ const Plaloc = () => {
           image="https://iconape.com/wp-content/files/op/164360/svg/164360.svg"
           subtitle={subtitle}
         />
-        <main className="plaloc__main">
-          <div className="product__card">
+        <main ref={ref} className="plaloc__main">
+          <div style={animation(isInView, 0.1)} className="product__card">
             <h3 className="product__card-title">
               1. General Zipper Profiles (For Polyethylene/Polypropylene Film)
             </h3>
@@ -41,8 +64,10 @@ const Plaloc = () => {
               </ul>
             </div>
           </div>
-          <hr />
-          <div className="product__card">
+
+          <hr ref={ref2} />
+
+          <div style={animation(isInView2, 0.1)} className="product__card">
             <h3 className="product__card-title">2. POCKETZIP™</h3>
             <span className="product__card-header">
               <img
@@ -64,8 +89,10 @@ const Plaloc = () => {
               </ul>
             </div>
           </div>
-          <hr />
-          <div className="product__card">
+
+          <hr ref={ref3} />
+
+          <div style={animation(isInView3, 0.1)} className="product__card">
             <h3 className="product__card-title">3. Linear Tear Zipper</h3>
             <span className="product__card-header">
               <img
@@ -91,8 +118,10 @@ const Plaloc = () => {
               </ul>
             </div>
           </div>
-          <hr />
-          <div className="product__card">
+
+          <hr ref={ref4} />
+
+          <div style={animation(isInView4, 0.1)} className="product__card">
             <h3 className="product__card-title">
               4. PLALOC™ Eco-friendly zipper
             </h3>

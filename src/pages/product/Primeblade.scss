@@ -76,6 +76,12 @@
 
 @media screen and (max-width: 576px) {
   .primeblade {
+    .player_wrapper {
+      width: auto;
+      height: 18rem;
+      margin-bottom: -2rem;
+    }
+
     &__main {
       margin: 3.5rem auto 6rem;
       width: 90%;

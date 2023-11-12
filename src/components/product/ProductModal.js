@@ -45,12 +45,12 @@ const ProductModal = ({ show, toggleShow, children, title }) => {
           onClick={() => {
             toggleShow();
           }}
-          className="w-5 h-5 2xl:w-6 2xl:h-6 absolute top-3 right-3 cursor-pointer rounded-full z-10"
+          className="w-7 h-7 lg:w-5 lg:h-5  2xl:w-6 2xl:h-6 absolute top-3 right-3 cursor-pointer rounded-full z-10"
         >
           <MdOutlineClose color="#242424" className="w-full h-auto" />
         </button>
 
-        <h2 className="text-xl font-normal pb-3">{title}</h2>
+        <h2 className="text-xl 2xl:text-2xl font-normal pb-3">{title}</h2>
 
         <div className="h-full overflow-auto">{children}</div>
       </motion.div>

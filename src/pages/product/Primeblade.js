@@ -1,33 +1,55 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./Primeblade.scss";
 import Footer from "../../components/Footer";
 import Layout from "../../components/Layout";
 import ProductHeader from "../../components/product/ProductHeader";
 import ReactPlayer from "react-player";
 import ProductModal from "../../components/product/ProductModal";
+import { useInView } from "framer-motion";
+
+const animation = (isInView, delay) => {
+  let style = {
+    transform: isInView ? "none" : "translateX(-30px)",
+    WebkitTransform: isInView ? "none" : "translateX(-30px)",
+    MozTransform: isInView ? "none" : "translateX(-30px)",
+    msTransform: isInView ? "none" : "translateX(-30px)",
+    OTransform: isInView ? "none" : "translateX(-30px)",
+    opacity: isInView ? 1 : 0,
+    transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${delay + 0.4}s`,
+  };
+  return style;
+};
+
+const animation2 = (isInView, delay) => {
+  let style = {
+    opacity: isInView ? 1 : 0,
+    transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${delay + 0.4}s`,
+  };
+  return style;
+};
 
 const htmlPrimeblade = {
   primeblade: {
     title: "PrimeBlade",
     data: () => {
       return (
-        <div className="product_wrapper w-full flex flex-col space-y-6">
-          <div className="w-full flex justify-between space-x-6">
-            <div className="w-4/12 h-auto flex shrink-0">
+        <div className="product_wrapper w-full flex flex-col space-y-5 lg:space-y-3">
+          <div className="w-full flex flex-col lg:flex-row justify-between space-y-3 lg:space-y-0 lg:space-x-6 text-justify">
+            <div className="w-full lg:w-4/12 h-auto flex shrink-0">
               <img
                 className="w-full h-auto object-contain"
                 src="/images/products/primeblade-nano-i.png"
                 alt="nano-i"
               />
             </div>
-            <div className="w-full flex flex-col space-y-5 pr-8">
+            <div className="w-full flex flex-col space-y-5 pr-0 lg:pr-8">
               <div className="flex flex-col">
-                <h6 className="font-light text-lg">Nano I</h6>
-                <span className="font-extralight text-xs">
+                <h6 className="font-light text-xl lg:text-lg">Nano I</h6>
+                <span className="font-extralight text-sm lg:text-xs">
                   High-carbon steel
                 </span>
               </div>
-              <div className="flex flex-col space-y-2 text-sm">
+              <div className="flex flex-col space-y-2 text-base lg:text-sm">
                 <p>
                   We currently offer Nano blades made from three different
                   premium quality Swedish steels: Nano I: High-carbon steel
@@ -41,7 +63,7 @@ const htmlPrimeblade = {
                   <b className="font-light">
                     PrimeBlade Nano series advantages
                   </b>
-                  <ul>
+                  <ul className="text-start">
                     <li>&#8210; Long lifetime</li>
                     <li>
                       &#8210; Environmentally friendly treatment, free from
@@ -58,22 +80,24 @@ const htmlPrimeblade = {
             </div>
           </div>
 
-          <div className="w-full flex justify-between space-x-6">
-            <div className="w-4/12 h-auto flex shrink-0">
+          <hr className="pb-5 lg:pb-4" />
+
+          <div className="w-full flex flex-col lg:flex-row justify-between space-y-3 lg:space-y-0 lg:space-x-6 text-justify">
+            <div className="w-full lg:w-4/12 h-auto flex shrink-0">
               <img
                 className="w-full h-auto object-contain"
                 src="/images/products/primeblade-nano-ii.png"
                 alt="nano-ii"
               />
             </div>
-            <div className="w-full flex flex-col space-y-5 pr-8">
+            <div className="w-full flex flex-col space-y-5 pr-0 lg:pr-8">
               <div className="flex flex-col">
-                <h6 className="font-light text-lg">Nano II</h6>
-                <span className="font-extralight text-xs">
+                <h6 className="font-light text-xl lg:text-lg">Nano II</h6>
+                <span className="font-extralight text-sm lg:text-xs">
                   Special Treated Stainless Steel
                 </span>
               </div>
-              <div className="flex flex-col space-y-2 text-sm">
+              <div className="flex flex-col space-y-2 text-base lg:text-sm">
                 <p>
                   We currently offer Nano blades made from three different
                   premium quality Swedish steels: Nano II - Martensitic
@@ -88,7 +112,7 @@ const htmlPrimeblade = {
                   <b className="font-light">
                     PrimeBlade Nano series advantages
                   </b>
-                  <ul>
+                  <ul className="text-start">
                     <li>&#8210; Long lifetime</li>
                     <li>
                       &#8210; Environmentally friendly treatment, free from
@@ -105,22 +129,24 @@ const htmlPrimeblade = {
             </div>
           </div>
 
-          <div className="w-full flex justify-between space-x-6">
-            <div className="w-4/12 h-auto flex shrink-0">
+          <hr className="pb-5 lg:pb-4" />
+
+          <div className="w-full flex flex-col lg:flex-row justify-between space-y-3 lg:space-y-0 lg:space-x-6 text-justify">
+            <div className="w-full lg:w-4/12 h-auto flex shrink-0">
               <img
                 className="w-full h-auto object-contain"
                 src="/images/products/primeblade-nano-iii.png"
                 alt="nano-iii"
               />
             </div>
-            <div className="w-full flex flex-col space-y-5 pr-8">
+            <div className="w-full flex flex-col space-y-5 pr-0 lg:pr-8">
               <div className="flex flex-col">
-                <h6 className="font-light text-lg">Nano III</h6>
-                <span className="font-extralight text-xs">
+                <h6 className="font-light text-xl lg:text-lg">Nano III</h6>
+                <span className="font-extralight text-sm lg:text-xs">
                   Special Treated Alloyed Tool Steel
                 </span>
               </div>
-              <div className="flex flex-col space-y-2 text-sm">
+              <div className="flex flex-col space-y-2 text-base lg:text-sm">
                 <p>
                   We currently offer Nano blades made from three different
                   premium quality Swedish steels: Nano III - Tool steel
@@ -134,7 +160,7 @@ const htmlPrimeblade = {
                   <b className="font-light">
                     PrimeBlade Nano series advantages
                   </b>
-                  <ul>
+                  <ul className="text-start">
                     <li>&#8210; Long lifetime</li>
                     <li>
                       &#8210; Environmentally friendly treatment, free from
@@ -159,8 +185,8 @@ const htmlPrimeblade = {
     title: "Doctor Blades",
     data: () => {
       return (
-        <div className="product_wrapper w-full flex flex-col space-y-6">
-          <div className="w-9/12 h-auto flex justify-center items-center mx-auto">
+        <div className="product_wrapper w-full flex">
+          <div className="w-full lg:w-9/12 h-auto flex justify-center items-center mx-auto">
             <img
               className="w-full h-auto object-contain"
               src="/images/products/primeblade-docter-blade.jpg"
@@ -176,8 +202,8 @@ const htmlPrimeblade = {
     title: "Nano Products",
     data: () => {
       return (
-        <div className="product_wrapper w-full flex flex-col space-y-6">
-          <div className="w-9/12 h-auto flex justify-center items-center mx-auto">
+        <div className="product_wrapper w-full flex">
+          <div className="w-full lg:w-9/12 h-auto flex justify-center items-center mx-auto">
             <img
               className="w-full h-auto object-contain"
               src="/images/products/primeblade-nano-blade.jpg"
@@ -194,16 +220,16 @@ const htmlPrimeblade = {
     data: () => {
       return (
         <div className="product_wrapper w-full flex flex-col space-y-6">
-          <div className="w-full flex justify-between space-x-6">
-            <div className="w-4/12 h-auto flex shrink-0">
+          <div className="w-full flex flex-col lg:flex-row justify-between space-y-3 lg:space-y-0 lg:space-x-6">
+            <div className="w-full lg:w-4/12 h-auto flex shrink-0">
               <img
                 className="w-full h-auto object-contain"
-                src="/images/products/primeblade-docter-blade.jpg"
+                src="/images/products/primeblade-profiles.jpg"
                 alt="Primeblade Product 1"
               />
             </div>
-            <div className="w-full flex flex-col space-y-5 pr-8">
-              <div className="flex flex-col space-y-2 text-sm">
+            <div className="w-full flex flex-col space-y-5 pr-0 lg:pr-8">
+              <div className="flex flex-col space-y-2 text-base lg:text-sm text-justify">
                 <p>
                   The PrimeBlade cutter simplifies the cutting of blades into
                   exact lengths. Together with the doctor blade cassette, it
@@ -211,7 +237,7 @@ const htmlPrimeblade = {
                   is produced with high quality knives, made from special steel.
                 </p>
 
-                <div>
+                <div className="text-start">
                   <ul>
                     <li>&#8210; Standard lengths 1300mm, 1500mm and 1700mm</li>
                     <li>
@@ -241,16 +267,16 @@ const htmlPrimeblade = {
     title: "Angle Gauge",
     data: () => {
       return (
-        <div className="product_wrapper w-full flex flex-col space-y-6">
-          <div className="w-full flex justify-between space-x-6">
-            <div className="w-4/12 h-auto flex shrink-0">
+        <div className="product_wrapper w-full flex flex-col">
+          <div className="w-full flex flex-col lg:flex-row justify-between space-y-3 lg:space-y-0 space-x-0 lg:space-x-6">
+            <div className="w-full lg:w-4/12 h-auto flex shrink-0">
               <img
                 className="w-full h-auto object-contain"
                 src="/images/products/primeblade-angle-gauge.jpg"
                 alt="Primeblade Angle Gauge"
               />
             </div>
-            <div className="w-full flex flex-col space-y-5 pr-8">
+            <div className="w-full flex flex-col space-y-5 pr-0 lg:pr-8 text-justify">
               <div className="flex flex-col space-y-2">
                 <p className="text-base">
                   Setting the correct blade angle is of utmost importance to
@@ -266,12 +292,12 @@ const htmlPrimeblade = {
 
                 <hr className="border-black !my-4" />
 
-                <p className="text-sm">
+                <p className="text-base lg:text-sm">
                   The PrimeBlade Angle Gauge comes in two sizes. One from
                   circumference 300mm to 785mm and the other from circumference
                   785mm to &gt;6.280mm.
                 </p>
-                <p className="text-sm">
+                <p className="text-base lg:text-sm">
                   Each gauge is delivered in a plastic pouch for protection.
                 </p>
               </div>
@@ -286,16 +312,16 @@ const htmlPrimeblade = {
     title: "PrimeSeals",
     data: () => {
       return (
-        <div className="product_wrapper w-full flex flex-col space-y-6">
-          <div className="w-full flex justify-between space-x-6">
-            <div className="w-4/12 h-auto flex shrink-0">
+        <div className="product_wrapper w-full flex">
+          <div className="w-full flex flex-col lg:flex-row justify-between space-y-3 lg:space-y-0 space-x-0 lg:space-x-6">
+            <div className="w-full lg:w-4/12 h-auto flex shrink-0">
               <img
                 className="w-full h-auto object-contain"
                 src="/images/products/primeblade-primeseals.jpg"
                 alt="PrimeSeals"
               />
             </div>
-            <div className="w-full flex flex-col space-y-5 pr-8">
+            <div className="w-full flex flex-col space-y-5 pr-0 lg:pr-8 text-justify">
               <div className="flex flex-col">
                 <h6 className="font-light text-lg">ZVK</h6>
               </div>
@@ -318,16 +344,16 @@ const htmlPrimeblade = {
     title: "Doctor Blade Cutter",
     data: () => {
       return (
-        <div className="product_wrapper w-full flex flex-col space-y-6">
-          <div className="w-full flex justify-between space-x-6">
-            <div className="w-4/12 h-auto flex shrink-0">
+        <div className="product_wrapper w-full flex">
+          <div className="w-full flex flex-col lg:flex-row justify-between space-y-3 lg:space-y-0 space-x-0 lg:space-x-6">
+            <div className="w-full lg:w-4/12 h-auto flex shrink-0">
               <img
                 className="w-full h-auto object-contain"
                 src="/images/products/primeblade-doctor-blade-cutter.jpg"
                 alt="Profile 50"
               />
             </div>
-            <div className="w-full flex flex-col space-y-5 pr-8">
+            <div className="w-full flex flex-col space-y-5 pr-0 lg:pr-8 text-justify">
               <div className="flex flex-col">
                 <h6 className="font-light text-lg">Profile 50</h6>
               </div>
@@ -347,6 +373,11 @@ const htmlPrimeblade = {
 };
 
 const Primeblade = () => {
+  const ref = useRef(null);
+  const ref2 = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const isInView2 = useInView(ref2, { once: true });
+
   const [isReady, setReady] = useState(false);
   const [isShow, setShow] = useState(false);
   const [data, setData] = useState({ render: () => {} });
@@ -385,8 +416,8 @@ const Primeblade = () => {
       )}
 
       <Layout>
-        <div className="primeblade">
-          <div className="player_wrapper">
+        <div ref={ref} className="primeblade">
+          <div style={animation2(isInView, 0.25)} className="player_wrapper">
             <ReactPlayer
               className="react-player"
               url="https://player.vimeo.com/video/878300349?muted=1&autoplay=1&loop=1&transparent=0&background=1&player_id=0&app_id=58479"
@@ -431,8 +462,9 @@ const Primeblade = () => {
             image="/images/logo/primeblade-logo.png"
             subtitle={subtitle}
           />
-          <main className="primeblade__main">
+          <main ref={ref2} className="primeblade__main">
             <div
+              style={animation(isInView2, 0)}
               onClick={() => handleShow("primeblade")}
               className="primeblade__main-product cursor-pointer"
             >
@@ -446,7 +478,9 @@ const Primeblade = () => {
                 }}
               />
             </div>
+
             <div
+              style={animation(isInView2, 0.25)}
               onClick={() => handleShow("doctor_blades")}
               className="primeblade__main-product cursor-pointer"
             >
@@ -457,7 +491,9 @@ const Primeblade = () => {
                 alt="Primeblade Product 1"
               />
             </div>
+
             <div
+              style={animation(isInView2, 0.5)}
               onClick={() => handleShow("nano_products")}
               className="primeblade__main-product cursor-pointer"
             >
@@ -468,7 +504,9 @@ const Primeblade = () => {
                 alt="Primeblade Product 2"
               />
             </div>
+
             <div
+              style={animation(isInView2, 0.75)}
               onClick={() => handleShow("profiles")}
               className="primeblade__main-product cursor-pointer"
             >
@@ -479,7 +517,9 @@ const Primeblade = () => {
                 alt="Primeblade Product 3"
               />
             </div>
+
             <div
+              style={animation(isInView2, 1)}
               onClick={() => handleShow("cutter")}
               className="primeblade__main-product cursor-pointer"
             >
@@ -490,7 +530,9 @@ const Primeblade = () => {
                 alt="Primeblade Product 4"
               />
             </div>
+
             <div
+              style={animation(isInView2, 1.25)}
               onClick={() => handleShow("seals")}
               className="primeblade__main-product cursor-pointer"
             >
@@ -501,7 +543,9 @@ const Primeblade = () => {
                 alt="Primeblade Product 5"
               />
             </div>
+
             <div
+              style={animation(isInView2, 1.5)}
               onClick={() => handleShow("angle_gauge")}
               className="primeblade__main-product cursor-pointer"
             >
