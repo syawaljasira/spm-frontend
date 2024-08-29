@@ -30,6 +30,16 @@ const Navbar = (props) => {
     }, 200);
   };
 
+  const handleEnvironment = () => {
+    setTimeout(() => {
+      window.scrollTo({
+        top: window.innerHeight + window.innerHeight / 3,
+        left: 0,
+        behavior: "smooth",
+      });
+    }, 200);
+  };
+
   const handleAboutUsMobile = () => {
     setTimeout(() => {
       window.scrollTo({
@@ -58,6 +68,15 @@ const Navbar = (props) => {
         ) : (
           <Link onClick={handleAboutUs} to="/">
             <li className="navbar__link-item">About Us</li>
+          </Link>
+        )}
+        {pathname === "/" ? (
+          <a href="/#environment">
+            <li className="navbar__link-item">Environment</li>
+          </a>
+        ) : (
+          <Link onClick={handleEnvironment} to="/">
+            <li className="navbar__link-item">Environment</li>
           </Link>
         )}
         <Link to="/products">
@@ -97,6 +116,26 @@ const Navbar = (props) => {
               href="#about-us"
             >
               About Us
+            </a>
+          )}
+          {pathname !== "/" ? (
+            <Link
+              onClick={() => {
+                toggleNav();
+                handleEnvironment();
+              }}
+              className="offcanvas__nav-link"
+              to="/"
+            >
+              Environment
+            </Link>
+          ) : (
+            <a
+              onClick={toggleNav}
+              className="offcanvas__nav-link"
+              href="#environment"
+            >
+              Environment
             </a>
           )}
           <Link

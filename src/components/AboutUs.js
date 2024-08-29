@@ -23,20 +23,44 @@ export default function AboutUs() {
 
   return (
     <div ref={ref} id="about-us" className="aboutUs">
-      <div className="aboutUs__image">
-        <img
-          style={animation(isInView, 0.75)}
-          src="/images/illustrations/hero.jpg"
-          alt="About Us"
-        />
+      <div className="w-full flex flex-col sm:flex-row justify-center items-center">
+        <div className="aboutUs__image">
+          <img
+            style={animation(isInView, 0.75)}
+            src="/images/illustrations/hero.jpg"
+            alt="About Us"
+          />
+        </div>
+        <div className="aboutUs__content">
+          <h4 style={animation(isInView, 1)}>About Us</h4>
+          <p style={animation(isInView, 1.25)}>
+            Established in the year 2009, PT. SSI Prima Mas is a trading company
+            specializing in supplying product and services for flexible
+            packaging industries.
+          </p>
+        </div>
       </div>
-      <div className="aboutUs__content">
-        <h4 style={animation(isInView, 1)}>About Us</h4>
-        <p style={animation(isInView, 1.25)}>
-          Established in the year 2009, PT. SSI Prima Mas is a trading company
-          specializing in supplying product and services for flexible packaging
-          industries.
-        </p>
+      <span id="environment"></span>
+      <div className="w-full flex flex-col-reverse sm:flex-row justify-center items-center">
+        <div className="aboutUs__content">
+          <h4 style={animation(isInView, 1)}>Environment</h4>
+          <p style={animation(isInView, 1.25)}>
+            We are committed to sustainability by reducing waste, optimizing
+            energy use, and supporting renewable resources. By integrating
+            sustainable practices into our business model, we aim to create a
+            positive impact on the planet. We strive to continually enhance our
+            environmental impact and foster a greener future through responsible
+            actions and innovations.
+          </p>
+        </div>
+        <div className="aboutUs__image">
+          <img
+            className="p-6"
+            style={animation(isInView, 0.75)}
+            src="/images/illustrations/environments.png"
+            alt="Environments"
+          />
+        </div>
       </div>
       <div className="aboutUs__footer">
         <div className="aboutUs__footer-item footer-item-1">
