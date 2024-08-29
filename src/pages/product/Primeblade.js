@@ -30,7 +30,7 @@ const animation2 = (isInView, delay) => {
 
 const htmlPrimeblade = {
   primeblade: {
-    title: "PrimeBlade",
+    title: "Doctor Blade",
     data: () => {
       return (
         <div className="product_wrapper w-full flex flex-col space-y-5 lg:space-y-3">
@@ -181,39 +181,39 @@ const htmlPrimeblade = {
     },
   },
 
-  doctor_blades: {
-    title: "Doctor Blades",
-    data: () => {
-      return (
-        <div className="product_wrapper w-full flex">
-          <div className="w-full lg:w-9/12 h-auto flex justify-center items-center mx-auto">
-            <img
-              className="w-full h-auto object-contain"
-              src="/images/products/primeblade-docter-blade.jpg"
-              alt="Doctor Blades"
-            />
-          </div>
-        </div>
-      );
-    },
-  },
+  // doctor_blades: {
+  //   title: "Doctor Blades",
+  //   data: () => {
+  //     return (
+  //       <div className="product_wrapper w-full flex">
+  //         <div className="w-full lg:w-9/12 h-auto flex justify-center items-center mx-auto">
+  //           <img
+  //             className="w-full h-auto object-contain"
+  //             src="/images/products/primeblade-docter-blade.jpg"
+  //             alt="Doctor Blades"
+  //           />
+  //         </div>
+  //       </div>
+  //     );
+  //   },
+  // },
 
-  nano_products: {
-    title: "Nano Products",
-    data: () => {
-      return (
-        <div className="product_wrapper w-full flex">
-          <div className="w-full lg:w-9/12 h-auto flex justify-center items-center mx-auto">
-            <img
-              className="w-full h-auto object-contain"
-              src="/images/products/primeblade-nano-blade.jpg"
-              alt="Nano Products"
-            />
-          </div>
-        </div>
-      );
-    },
-  },
+  // nano_products: {
+  //   title: "Nano Products",
+  //   data: () => {
+  //     return (
+  //       <div className="product_wrapper w-full flex">
+  //         <div className="w-full lg:w-9/12 h-auto flex justify-center items-center mx-auto">
+  //           <img
+  //             className="w-full h-auto object-contain"
+  //             src="/images/products/primeblade-nano-blade.jpg"
+  //             alt="Nano Products"
+  //           />
+  //         </div>
+  //       </div>
+  //     );
+  //   },
+  // },
 
   profiles: {
     title: "PrimeBlade cutter",
@@ -340,36 +340,36 @@ const htmlPrimeblade = {
     },
   },
 
-  cutter: {
-    title: "Doctor Blade Cutter",
-    data: () => {
-      return (
-        <div className="product_wrapper w-full flex">
-          <div className="w-full flex flex-col lg:flex-row justify-between space-y-3 lg:space-y-0 space-x-0 lg:space-x-6">
-            <div className="w-full lg:w-4/12 h-auto flex shrink-0">
-              <img
-                className="w-full h-auto object-contain"
-                src="/images/products/primeblade-doctor-blade-cutter.jpg"
-                alt="Profile 50"
-              />
-            </div>
-            <div className="w-full flex flex-col space-y-5 pr-0 lg:pr-8 text-justify">
-              <div className="flex flex-col">
-                <h6 className="font-light text-lg">Profile 50</h6>
-              </div>
-              <p className="flex text-base">
-                Most commonly used edge today in both flexo and gravure.
-                Constant contact area during wear. Lower friction and wear
-                against roller. Standard dimension 1,3/0,07mm for gravure and
-                1,3/0,10mm for flexo, but can be produced according to
-                requirement.
-              </p>
-            </div>
-          </div>
-        </div>
-      );
-    },
-  },
+  // cutter: {
+  //   title: "Doctor Blade Cutter",
+  //   data: () => {
+  //     return (
+  //       <div className="product_wrapper w-full flex">
+  //         <div className="w-full flex flex-col lg:flex-row justify-between space-y-3 lg:space-y-0 space-x-0 lg:space-x-6">
+  //           <div className="w-full lg:w-4/12 h-auto flex shrink-0">
+  //             <img
+  //               className="w-full h-auto object-contain"
+  //               src="/images/products/primeblade-doctor-blade-cutter.jpg"
+  //               alt="Profile 50"
+  //             />
+  //           </div>
+  //           <div className="w-full flex flex-col space-y-5 pr-0 lg:pr-8 text-justify">
+  //             <div className="flex flex-col">
+  //               <h6 className="font-light text-lg">Profile 50</h6>
+  //             </div>
+  //             <p className="flex text-base">
+  //               Most commonly used edge today in both flexo and gravure.
+  //               Constant contact area during wear. Lower friction and wear
+  //               against roller. Standard dimension 1,3/0,07mm for gravure and
+  //               1,3/0,10mm for flexo, but can be produced according to
+  //               requirement.
+  //             </p>
+  //           </div>
+  //         </div>
+  //       </div>
+  //     );
+  //   },
+  // },
 };
 
 const Primeblade = () => {
@@ -468,7 +468,7 @@ const Primeblade = () => {
               onClick={() => handleShow("primeblade")}
               className="primeblade__main-product cursor-pointer"
             >
-              <h6>PRIMEBLADE</h6>
+              <h6>DOCTOR BLADE</h6>
               <img
                 className="transition-hover"
                 src="/images/products/primeblade-ori.png"
@@ -479,7 +479,7 @@ const Primeblade = () => {
               />
             </div>
 
-            <div
+            {/* <div
               style={animation(isInView2, 0.25)}
               onClick={() => handleShow("doctor_blades")}
               className="primeblade__main-product cursor-pointer"
@@ -503,7 +503,7 @@ const Primeblade = () => {
                 src="/images/products/primeblade-nano-blade.jpg"
                 alt="Primeblade Product 2"
               />
-            </div>
+            </div> */}
 
             <div
               style={animation(isInView2, 0.75)}
@@ -518,7 +518,7 @@ const Primeblade = () => {
               />
             </div>
 
-            <div
+            {/* <div
               style={animation(isInView2, 1)}
               onClick={() => handleShow("cutter")}
               className="primeblade__main-product cursor-pointer"
@@ -529,7 +529,7 @@ const Primeblade = () => {
                 src="/images/products/primeblade-doctor-blade-cutter.jpg"
                 alt="Primeblade Product 4"
               />
-            </div>
+            </div> */}
 
             <div
               style={animation(isInView2, 1.25)}

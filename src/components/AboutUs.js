@@ -43,7 +43,7 @@ export default function AboutUs() {
       <span id="environment"></span>
       <div className="w-full flex flex-col-reverse sm:flex-row justify-center items-center">
         <div className="aboutUs__content">
-          <h4 style={animation(isInView, 1)}>Environment</h4>
+          <h4 style={animation(isInView, 1)}>For a Better Tomorrow</h4>
           <p style={animation(isInView, 1.25)}>
             We are committed to sustainability by reducing waste, optimizing
             energy use, and supporting renewable resources. By integrating
