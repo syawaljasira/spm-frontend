@@ -6,6 +6,7 @@ import ProductHeader from "../../components/product/ProductHeader";
 import ReactPlayer from "react-player";
 import ProductModal from "../../components/product/ProductModal";
 import { useInView } from "framer-motion";
+import Spinner from "../../components/Spinner";
 
 const animation = (isInView, delay) => {
   let style = {
@@ -403,6 +404,8 @@ const Primeblade = () => {
     }
   };
 
+  console.log(isReady);
+
   return (
     <>
       {isShow && (
@@ -417,147 +420,161 @@ const Primeblade = () => {
 
       <Layout>
         <div ref={ref} className="primeblade">
-          <div style={animation2(isInView, 0.25)} className="player_wrapper">
-            <ReactPlayer
+          <>
+            {!isReady && (
+              <div className="h-[90vh] flex justify-center items-center">
+                <Spinner className={"w-10 h-10"} />
+              </div>
+            )}
+
+            <div
+              style={animation2(isInView, 0.25)}
+              className={`player_wrapper ${isReady ? "" : "hidden"}`}
+            >
+              <ReactPlayer
+                className={`react-player`}
+                url="https://player.vimeo.com/video/878300349?muted=1&autoplay=1&loop=1&transparent=0&background=1&player_id=0&app_id=58479"
+                frameBorder="0"
+                width="100%"
+                height="100%"
+                loop
+                playing={isReady}
+                muted
+                config={{
+                  vimeo: {
+                    playerOptions: {
+                      // Atur kualitas video ke HD (720p)
+                      quality: "hd1080",
+                      fs: 1,
+                    },
+                    playerVars: {
+                      modestbranding: 1,
+                    },
+                  },
+                  // yout?ube: {},
+                }}
+                onReady={handlePlayerReady}
+                style={{
+                  visibility: isReady ? "visible" : "hidden",
+                }}
+              />
+
+              {/* <ReactPlayer
               className="react-player"
-              url="https://player.vimeo.com/video/878300349?muted=1&autoplay=1&loop=1&transparent=0&background=1&player_id=0&app_id=58479"
-              frameBorder="0"
+              url="/video/primeblade.mp4"
               width="100%"
               height="100%"
               loop
-              playing={isReady}
+              playing
               muted
-              config={{
-                vimeo: {
-                  playerOptions: {
-                    // Atur kualitas video ke HD (720p)
-                    quality: "hd1080",
-                    fs: 1,
-                  },
-                  playerVars: {
-                    modestbranding: 1,
-                  },
-                },
-                // yout?ube: {},
-              }}
-              onReady={handlePlayerReady}
-              style={{
-                visibility: isReady ? "visible" : "hidden",
-              }}
-            />
-
-            {/* <ReactPlayer
-            className="react-player"
-            url="/video/primeblade.mp4"
-            width="100%"
-            height="100%"
-            loop
-            playing
-            muted
-          /> */}
-          </div>
-
-          <ProductHeader
-            title="Primeblade"
-            image="/images/logo/primeblade-logo.png"
-            subtitle={subtitle}
-          />
-          <main ref={ref2} className="primeblade__main">
-            <div
-              style={animation(isInView2, 0)}
-              onClick={() => handleShow("primeblade")}
-              className="primeblade__main-product cursor-pointer"
-            >
-              <h6>DOCTOR BLADE</h6>
-              <img
-                className="transition-hover"
-                src="/images/products/primeblade-ori.png"
-                alt="Primeblade Product 1"
-                style={{
-                  backgroundColor: "#F9F9F9",
-                }}
-              />
+            /> */}
             </div>
 
-            {/* <div
-              style={animation(isInView2, 0.25)}
-              onClick={() => handleShow("doctor_blades")}
-              className="primeblade__main-product cursor-pointer"
-            >
-              <h6>DOCTOR BLADES</h6>
-              <img
-                className="transition-hover"
-                src="/images/products/primeblade-docter-blade.jpg"
-                alt="Primeblade Product 1"
+            <div className={`${isReady ? "flex flex-col" : "hidden"}`}>
+              <ProductHeader
+                title="Primeblade"
+                image="/images/logo/primeblade-logo.png"
+                subtitle={subtitle}
               />
+              <main ref={ref2} className="primeblade__main">
+                <div
+                  style={animation(isInView2, 0)}
+                  onClick={() => handleShow("primeblade")}
+                  className="primeblade__main-product cursor-pointer"
+                >
+                  <h6>DOCTOR BLADE</h6>
+                  <img
+                    className="transition-hover"
+                    src="/images/products/primeblade-ori.png"
+                    alt="Primeblade Product 1"
+                    style={{
+                      backgroundColor: "#F9F9F9",
+                    }}
+                  />
+                </div>
+
+                {/* <div
+                style={animation(isInView2, 0.25)}
+                onClick={() => handleShow("doctor_blades")}
+                className="primeblade__main-product cursor-pointer"
+              >
+                <h6>DOCTOR BLADES</h6>
+                <img
+                  className="transition-hover"
+                  src="/images/products/primeblade-docter-blade.jpg"
+                  alt="Primeblade Product 1"
+                />
+              </div>
+  
+              <div
+                style={animation(isInView2, 0.5)}
+                onClick={() => handleShow("nano_products")}
+                className="primeblade__main-product cursor-pointer"
+              >
+                <h6>NANO PRODUCTS</h6>
+                <img
+                  className="transition-hover"
+                  src="/images/products/primeblade-nano-blade.jpg"
+                  alt="Primeblade Product 2"
+                />
+              </div> */}
+
+                <div
+                  style={animation(isInView2, 0.75)}
+                  onClick={() => handleShow("profiles")}
+                  className="primeblade__main-product cursor-pointer"
+                >
+                  <h6>PRIMEBLADE CUTTER</h6>
+                  <img
+                    className="transition-hover"
+                    src="/images/products/primeblade-profiles.jpg"
+                    alt="Primeblade Product 3"
+                  />
+                </div>
+
+                {/* <div
+                style={animation(isInView2, 1)}
+                onClick={() => handleShow("cutter")}
+                className="primeblade__main-product cursor-pointer"
+              >
+                <h6>DOCTOR BLADE CUTTER</h6>
+                <img
+                  className="transition-hover"
+                  src="/images/products/primeblade-doctor-blade-cutter.jpg"
+                  alt="Primeblade Product 4"
+                />
+              </div> */}
+
+                <div
+                  style={animation(isInView2, 1.25)}
+                  onClick={() => handleShow("seals")}
+                  className="primeblade__main-product cursor-pointer"
+                >
+                  <h6>PRIMESEALS</h6>
+                  <img
+                    className="transition-hover"
+                    src="/images/products/primeblade-primeseals.jpg"
+                    alt="Primeblade Product 5"
+                  />
+                </div>
+
+                <div
+                  style={animation(isInView2, 1.5)}
+                  onClick={() => handleShow("angle_gauge")}
+                  className="primeblade__main-product cursor-pointer"
+                >
+                  <h6>ANGLE GAUGE</h6>
+                  <img
+                    className="transition-hover"
+                    src="/images/products/primeblade-angle-gauge.jpg"
+                    alt="Primeblade Product 6"
+                  />
+                </div>
+              </main>
+
+              <Footer />
             </div>
-
-            <div
-              style={animation(isInView2, 0.5)}
-              onClick={() => handleShow("nano_products")}
-              className="primeblade__main-product cursor-pointer"
-            >
-              <h6>NANO PRODUCTS</h6>
-              <img
-                className="transition-hover"
-                src="/images/products/primeblade-nano-blade.jpg"
-                alt="Primeblade Product 2"
-              />
-            </div> */}
-
-            <div
-              style={animation(isInView2, 0.75)}
-              onClick={() => handleShow("profiles")}
-              className="primeblade__main-product cursor-pointer"
-            >
-              <h6>PRIMEBLADE CUTTER</h6>
-              <img
-                className="transition-hover"
-                src="/images/products/primeblade-profiles.jpg"
-                alt="Primeblade Product 3"
-              />
-            </div>
-
-            {/* <div
-              style={animation(isInView2, 1)}
-              onClick={() => handleShow("cutter")}
-              className="primeblade__main-product cursor-pointer"
-            >
-              <h6>DOCTOR BLADE CUTTER</h6>
-              <img
-                className="transition-hover"
-                src="/images/products/primeblade-doctor-blade-cutter.jpg"
-                alt="Primeblade Product 4"
-              />
-            </div> */}
-
-            <div
-              style={animation(isInView2, 1.25)}
-              onClick={() => handleShow("seals")}
-              className="primeblade__main-product cursor-pointer"
-            >
-              <h6>PRIMESEALS</h6>
-              <img
-                className="transition-hover"
-                src="/images/products/primeblade-primeseals.jpg"
-                alt="Primeblade Product 5"
-              />
-            </div>
-
-            <div
-              style={animation(isInView2, 1.5)}
-              onClick={() => handleShow("angle_gauge")}
-              className="primeblade__main-product cursor-pointer"
-            >
-              <h6>ANGLE GAUGE</h6>
-              <img
-                className="transition-hover"
-                src="/images/products/primeblade-angle-gauge.jpg"
-                alt="Primeblade Product 6"
-              />
-            </div>
-          </main>
-          <Footer />
+          </>
         </div>
       </Layout>
     </>
