@@ -433,26 +433,17 @@ const Primeblade = () => {
             >
               <ReactPlayer
                 className={`react-player`}
-                url="https://player.vimeo.com/video/878300349?muted=1&autoplay=1&loop=1&transparent=0&background=1&player_id=0&app_id=58479"
+                // url="https://player.vimeo.com/video/878300349?muted=1&autoplay=1&loop=1&transparent=0&background=1&player_id=0&app_id=58479"
+                // url="https://www.youtube.com/watch?v=zNnoMh4qOns"
+                url={`/images/primeblade.mp4?muted=1&autoplay=1&loop=1&transparent=0&background=1&playsinline=1`}
                 frameBorder="0"
                 width="100%"
                 height="100%"
                 loop
+                autoplay
                 playing={isReady}
                 muted
-                config={{
-                  vimeo: {
-                    playerOptions: {
-                      // Atur kualitas video ke HD (720p)
-                      quality: "hd1080",
-                      fs: 1,
-                    },
-                    playerVars: {
-                      modestbranding: 1,
-                    },
-                  },
-                  // yout?ube: {},
-                }}
+                playsinline
                 onReady={handlePlayerReady}
                 style={{
                   visibility: isReady ? "visible" : "hidden",
