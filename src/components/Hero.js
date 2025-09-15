@@ -14,20 +14,20 @@ const animation = (isInView, delay) => {
     msTransform: isInView ? "none" : "translateX(-50px)",
     OTransform: isInView ? "none" : "translateX(-50px)",
     opacity: isInView ? 1 : 0,
-    transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${delay + 0.4}s`,
+    transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${delay + 0.3}s`,
   };
   return style;
 };
 
 const animation2 = (isInView, delay) => {
   let style = {
-    transform: isInView ? "none" : "scale(0.75)",
-    WebkitTransform: isInView ? "none" : "scale(0.75)",
-    MozTransform: isInView ? "none" : "scale(0.75)",
-    msTransform: isInView ? "none" : "scale(0.75)",
-    OTransform: isInView ? "none" : "scale(0.75)",
+    transform: isInView ? "none" : "scale(0.85)",
+    WebkitTransform: isInView ? "none" : "scale(0.85)",
+    MozTransform: isInView ? "none" : "scale(0.85)",
+    msTransform: isInView ? "none" : "scale(0.85)",
+    OTransform: isInView ? "none" : "scale(0.85)",
     opacity: isInView ? 1 : 0,
-    transition: `all 1s cubic-bezier(0.17, 1.5, 0.45, 1) ${delay + 0.4}s`,
+    transition: `all 1s cubic-bezier(0.17, 1.5, 0.45, 1) ${delay + 0.3}s`,
   };
   return style;
 };
@@ -43,7 +43,7 @@ const Hero = () => {
   useEffect(() => {
     const getScrollPosition = () => {
       if (isBrowser && window.innerWidth > 992) {
-        if (window.scrollY > 2 * window.innerHeight + 240) {
+        if (window.scrollY > 2 * window.innerHeight + 600) {
           setChangeBg(3);
         } else if (window.scrollY > window.innerHeight) {
           setChangeBg(2);
@@ -51,7 +51,7 @@ const Hero = () => {
           setChangeBg(1);
         }
       } else {
-        if (window.scrollY > 2 * window.innerHeight + 240) {
+        if (window.scrollY > 2 * window.innerHeight + 600) {
           setChangeBg(3);
         } else if (window.scrollY > window.innerHeight) {
           setChangeBg(2);
@@ -73,8 +73,9 @@ const Hero = () => {
       <div
         className="hero__bg"
         style={{
-          backgroundImage: `url(/images/products/scitech-store.jpg)`,
+          backgroundImage: `url(/images/banner/bg-warehouse-2.jpg)`,
           display: changeBg === 1 ? "block" : "none",
+          backgroundPosition: "center",
         }}
       ></div>
       <div
@@ -87,7 +88,7 @@ const Hero = () => {
       <div
         className="hero__bg"
         style={{
-          backgroundImage: `url(http://img2.yun300.cn/repository/image/X6U6cuFbQoaUAaZIPcJBqg.jpg?tenantId=51910&viewType=1)`,
+          backgroundImage: `url(/images/banner/bg-warehouse-1.jpg)`,
           display: changeBg === 3 ? "block" : "none",
         }}
       ></div>
@@ -100,15 +101,15 @@ const Hero = () => {
             <span className="line"></span>
             <h6>PT. SSI Prima Mas</h6>
           </span>
-          <h1 style={animation(isInView, 0.25)}>
+          <h1 style={animation(isInView, 0.2)}>
             We Specialized in Supplying Product and Services for the Flexible
             Packaging Industries.
           </h1>
-          <p style={animation(isInView, 0.5)}>
+          <p style={animation(isInView, 0.4)}>
             Providing excellent service, support and premium quality products.
           </p>
           <span
-            style={animation(isInView, 0.75)}
+            style={animation(isInView, 0.6)}
             className="hero__content-left-btn"
           >
             <Link to="/products">
@@ -118,7 +119,7 @@ const Hero = () => {
         </div>
         <div className="hero__content-right">
           <div className="hero__content-right-anim">
-            <div style={animation2(isInView, 1)} id="packaging-animation">
+            <div style={animation2(isInView, 0.85)} id="packaging-animation">
               <Lottie animationData={packagingAnimation} loop autoplay />
             </div>
           </div>

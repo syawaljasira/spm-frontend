@@ -16,7 +16,7 @@ const animation = (isInView, delay) => {
     msTransform: isInView ? "none" : "translateX(-30px)",
     OTransform: isInView ? "none" : "translateX(-30px)",
     opacity: isInView ? 1 : 0,
-    transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${delay + 0.4}s`,
+    transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${delay + 0.3}s`,
   };
   return style;
 };
@@ -24,7 +24,7 @@ const animation = (isInView, delay) => {
 const animation2 = (isInView, delay) => {
   let style = {
     opacity: isInView ? 1 : 0,
-    transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${delay + 0.4}s`,
+    transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${delay + 0.3}s`,
   };
   return style;
 };
@@ -428,7 +428,7 @@ const Primeblade = () => {
             )}
 
             <div
-              style={animation2(isInView, 0.25)}
+              style={animation2(isInView, 0.2)}
               className={`player_wrapper ${isReady ? "" : "hidden"}`}
             >
               <ReactPlayer
@@ -469,7 +469,7 @@ const Primeblade = () => {
               />
               <main ref={ref2} className="primeblade__main">
                 <div
-                  style={animation(isInView2, 0)}
+                  style={animation(isInView2, 0.2)}
                   onClick={() => handleShow("primeblade")}
                   className="primeblade__main-product cursor-pointer"
                 >
@@ -485,7 +485,7 @@ const Primeblade = () => {
                 </div>
 
                 {/* <div
-                style={animation(isInView2, 0.25)}
+                style={animation(isInView2, 0.2)}
                 onClick={() => handleShow("doctor_blades")}
                 className="primeblade__main-product cursor-pointer"
               >
@@ -511,7 +511,7 @@ const Primeblade = () => {
               </div> */}
 
                 <div
-                  style={animation(isInView2, 0.75)}
+                  style={animation(isInView2, 0.4)}
                   onClick={() => handleShow("profiles")}
                   className="primeblade__main-product cursor-pointer"
                 >
@@ -537,7 +537,7 @@ const Primeblade = () => {
               </div> */}
 
                 <div
-                  style={animation(isInView2, 1.25)}
+                  style={animation(isInView2, 0.6)}
                   onClick={() => handleShow("seals")}
                   className="primeblade__main-product cursor-pointer"
                 >
@@ -550,7 +550,7 @@ const Primeblade = () => {
                 </div>
 
                 <div
-                  style={animation(isInView2, 1.5)}
+                  style={animation(isInView2, 0.8)}
                   onClick={() => handleShow("angle_gauge")}
                   className="primeblade__main-product cursor-pointer"
                 >

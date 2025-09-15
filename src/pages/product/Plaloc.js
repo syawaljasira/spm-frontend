@@ -13,7 +13,7 @@ const animation = (isInView, delay) => {
     msTransform: isInView ? "none" : "translateX(-30px)",
     OTransform: isInView ? "none" : "translateX(-30px)",
     opacity: isInView ? 1 : 0,
-    transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${delay + 0.4}s`,
+    transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${delay + 0.3}s`,
   };
   return style;
 };
@@ -35,11 +35,7 @@ const Plaloc = () => {
   return (
     <Layout>
       <div className="plaloc">
-        <ProductHeader
-          title="Idemitsu Plaloc"
-          image="https://iconape.com/wp-content/files/op/164360/svg/164360.svg"
-          subtitle={subtitle}
-        />
+        <ProductHeader title="Idemitsu Plaloc" image="" subtitle={subtitle} />
         <main ref={ref} className="plaloc__main">
           <div style={animation(isInView, 0.1)} className="product__card">
             <h3 className="product__card-title">

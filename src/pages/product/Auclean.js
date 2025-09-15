@@ -8,7 +8,7 @@ import { useInView } from "framer-motion";
 const animation = (isInView, delay) => {
   let style = {
     opacity: isInView ? 1 : 0,
-    transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${delay + 0.4}s`,
+    transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${delay + 0.3}s`,
   };
   return style;
 };
@@ -34,7 +34,7 @@ const Auclean = () => {
           subtitle={subtitle}
         />
         <main ref={ref} className="auclean__main">
-          <div style={animation(isInView, 0.5)} className="product__card">
+          <div style={animation(isInView, 0.4)} className="product__card">
             <h3 className="product__card-title">
               1. 5S Sleeve Type (Cantilever) Press Machine
             </h3>

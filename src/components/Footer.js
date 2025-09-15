@@ -10,7 +10,7 @@ const animation = (isInView, delay) => {
     msTransform: isInView ? "none" : "translateX(-30px)",
     OTransform: isInView ? "none" : "translateX(-30px)",
     opacity: isInView ? 1 : 0,
-    transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${delay + 0.4}s`,
+    transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${delay + 0.3}s`,
   };
   return style;
 };
@@ -27,14 +27,14 @@ const Footer = ({ no_address }) => {
         <div ref={ref} className="footer__address">
           <div className="footer__address-item">
             <h5 style={animation(isInView, 0)}>Head Office</h5>
-            <address style={animation(isInView, 0.25)}>
+            <address style={animation(isInView, 0.2)}>
               Grand Wisata Jl. Celebration Boulevard BA1 No. 19-20 Tambun -
               Bekasi 17510 Indonesia
             </address>
           </div>
           <div className="footer__address-item">
-            <h5 style={animation(isInView, 0.5)}>Showroom & Warehouse</h5>
-            <address style={animation(isInView, 0.75)}>
+            <h5 style={animation(isInView, 0.4)}>Showroom & Warehouse</h5>
+            <address style={animation(isInView, 0.6)}>
               Jababeka 2 Industrial Estate Jl. Industri Selatan Blok HH No. 15,
               Pasir Sari Cikarang - Bekasi Indonesia
             </address>

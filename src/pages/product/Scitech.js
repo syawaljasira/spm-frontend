@@ -13,7 +13,7 @@ const animation = (isInView, delay) => {
     msTransform: isInView ? "none" : "translateX(-30px)",
     OTransform: isInView ? "none" : "translateX(-30px)",
     opacity: isInView ? 1 : 0,
-    transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${delay + 0.4}s`,
+    transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${delay + 0.3}s`,
   };
   return style;
 };
@@ -36,25 +36,25 @@ const Scitech = () => {
         />
         <main ref={ref} className="scitech__main">
           <img
-            style={animation(isInView, 0.75)}
+            style={animation(isInView, 0.6)}
             className="scitech__main-product"
             src="/images/products/scitech-home-barrels.jpg"
             alt="Scitech Product 1"
           />
           <img
-            style={animation(isInView, 1)}
+            style={animation(isInView, 0.8)}
             className="scitech__main-product"
             src="/images/products/scitech-lab.jpg"
             alt="Scitech Product 2"
           />
           <img
-            style={animation(isInView, 1.25)}
+            style={animation(isInView, 1)}
             className="scitech__main-product"
             src="/images/products/scitech-lab-1.jpg"
             alt="Scitech Product 3"
           />
           <img
-            style={animation(isInView, 1.5)}
+            style={animation(isInView, 1.2)}
             className="scitech__main-product"
             src="/images/products/scitech-store.jpg"
             alt="Scitech Product 4"

@@ -10,7 +10,7 @@ const animation = (isInView, delay) => {
     msTransform: isInView ? "none" : "translateX(-30px)",
     OTransform: isInView ? "none" : "translateX(-30px)",
     opacity: isInView ? 1 : 0,
-    transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${delay + 0.4}s`,
+    transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${delay + 0.3}s`,
   };
   return style;
 };
@@ -23,7 +23,7 @@ const animation2 = (isInView, delay) => {
     msTransform: isInView ? "none" : "translateX(30px)",
     OTransform: isInView ? "none" : "translateX(30px)",
     opacity: isInView ? 1 : 0,
-    transition: `all 1s cubic-bezier(0.17, 1.5, 0.45, 1) ${delay + 0.4}s`,
+    transition: `all 1s cubic-bezier(0.17, 1.5, 0.45, 1) ${delay + 0.3}s`,
   };
   return style;
 };
@@ -40,38 +40,38 @@ export default function VisionAndMission() {
             <span></span>
             <h4>Our Vision</h4>
           </div>
-          <p style={animation(isInView, 0.25)}>
+          <p style={animation(isInView, 0.2)}>
             To accelerate packaging industry development in Indonesia by
             providing new technology to our customers
           </p>
         </div>
-        <div style={animation2(isInView, 0.5)} className="vision__image">
+        <div style={animation2(isInView, 0.4)} className="vision__image">
           <img
-            style={animation2(isInView, 0.75)}
+            style={animation2(isInView, 0.6)}
             src="/images/banner/working-man.jpg"
             alt="Vision"
           />
         </div>
       </div>
       <div className="mission">
-        <div style={animation(isInView, 1)} className="mission__image">
+        <div style={animation(isInView, 0.8)} className="mission__image">
           <img
-            style={animation(isInView, 1.25)}
+            style={animation(isInView, 1)}
             src="/images/banner/warehouse.jpg"
             alt="Mission"
           />
         </div>
         <div className="mission__content">
-          <div style={animation(isInView, 1.5)}>
+          <div style={animation(isInView, 1.2)}>
             <span></span>
             <h4>Our Mission</h4>
           </div>
-          <p style={animation(isInView, 1.75)}>
+          <p style={animation(isInView, 1.4)}>
             Introducing and delivering values towards our customers in the form
             of:
           </p>
           <ul
-            style={animation(isInView, 1.75)}
+            style={animation(isInView, 1.4)}
             className="mission__content-list"
           >
             <li>Premium quality product</li>

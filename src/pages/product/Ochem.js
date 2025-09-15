@@ -13,7 +13,7 @@ const animation = (isInView, delay) => {
     msTransform: isInView ? "none" : "translateX(-30px)",
     OTransform: isInView ? "none" : "translateX(-30px)",
     opacity: isInView ? 1 : 0,
-    transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${delay + 0.4}s`,
+    transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${delay + 0.3}s`,
   };
   return style;
 };
@@ -36,19 +36,19 @@ const Ochem = () => {
         />
         <main ref={ref} className="ochem__main">
           <img
-            style={animation(isInView, 0.5)}
+            style={animation(isInView, 0.4)}
             className="ochem__main-product-1"
             src="https://image.made-in-china.com/43f34j00CoDhVdrRhvpg/Ochem-Two-Component-Solvent-Base-Adhesive-for-High-Speed-Applications.jpg"
             alt="Ochem Product 1"
           />
           <img
-            style={animation(isInView, 0.75)}
+            style={animation(isInView, 0.6)}
             className="ochem__main-product-2"
             src="https://image.made-in-china.com/2f0j00bkHlejrWHoga/Ochem-Sf9180A-Sf9180b-Solvent-Free-Polyurethane-Adhesive-for-Wide-Applications-with-High-Speed.jpg"
             alt="Ochem Product 2"
           />
           <img
-            style={animation(isInView, 1)}
+            style={animation(isInView, 0.8)}
             className="ochem__main-product-3"
             src="/images/products/ochem-product-1.png"
             alt="Ochem Product 3"

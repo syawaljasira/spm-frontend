@@ -14,7 +14,7 @@ const animation = (isInView, delay) => {
     msTransform: isInView ? "none" : "translateX(-30px)",
     OTransform: isInView ? "none" : "translateX(-30px)",
     opacity: isInView ? 1 : 0,
-    transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${delay + 0.4}s`,
+    transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${delay + 0.3}s`,
   };
   return style;
 };
@@ -36,7 +36,7 @@ const Products = () => {
                 className="productCard"
                 key={item.product_id}
                 to={`/product/${item.slug}`}
-                style={animation(isInView, (index + 1) * 0.25)}
+                style={animation(isInView, (index + 1) * 0.2)}
               >
                 <span className="productCard__image">
                   <img src={item.image_product} alt="Auclean" />

@@ -12,7 +12,7 @@ const animation = (isInView, delay) => {
     msTransform: isInView ? "none" : "translateX(-30px)",
     OTransform: isInView ? "none" : "translateX(-30px)",
     opacity: isInView ? 1 : 0,
-    transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${delay + 0.4}s`,
+    transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${delay + 0.3}s`,
   };
   return style;
 };
@@ -26,14 +26,14 @@ export default function AboutUs() {
       <div className="w-full flex flex-col sm:flex-row justify-center items-center">
         <div className="aboutUs__image">
           <img
-            style={animation(isInView, 0.75)}
+            style={animation(isInView, 0.6)}
             src="/images/illustrations/hero.jpg"
             alt="About Us"
           />
         </div>
         <div className="aboutUs__content">
           <h4 style={animation(isInView, 1)}>About Us</h4>
-          <p style={animation(isInView, 1.25)}>
+          <p style={animation(isInView, 1)}>
             Established in the year 2009, PT. SSI Prima Mas is a trading company
             specializing in supplying product and services for flexible
             packaging industries.
@@ -44,7 +44,7 @@ export default function AboutUs() {
       <div className="w-full flex flex-col-reverse sm:flex-row justify-center items-center">
         <div className="aboutUs__content">
           <h4 style={animation(isInView, 1)}>For a Better Tomorrow</h4>
-          <p style={animation(isInView, 1.25)}>
+          <p style={animation(isInView, 1)}>
             We are committed to sustainability by reducing waste, optimizing
             energy use, and supporting renewable resources. By integrating
             sustainable practices into our business model, we aim to create a
@@ -56,7 +56,7 @@ export default function AboutUs() {
         <div className="aboutUs__image">
           <img
             className="p-6"
-            style={animation(isInView, 0.75)}
+            style={animation(isInView, 0.6)}
             src="/images/illustrations/environments.png"
             alt="Environments"
           />
@@ -64,31 +64,31 @@ export default function AboutUs() {
       </div>
       <div className="aboutUs__footer">
         <div className="aboutUs__footer-item footer-item-1">
-          <MdEco style={animation(isInView, 1.5)} className="icon-eco" />
+          <MdEco style={animation(isInView, 1.4)} className="icon-eco" />
           <span>
-            <h4 style={animation(isInView, 1.75)}>Issues</h4>
-            <p style={animation(isInView, 2)}>
+            <h4 style={animation(isInView, 1.6)}>Issues</h4>
+            <p style={animation(isInView, 1.8)}>
               Learn and understand problems and needs
             </p>
           </span>
         </div>
         <div className="aboutUs__footer-item footer-item-2">
           <MdOutlinePrecisionManufacturing
-            style={animation(isInView, 1.5)}
+            style={animation(isInView, 1.4)}
             className="icon-manufacture"
           />
           <span>
-            <h4 style={animation(isInView, 1.75)}>Development</h4>
-            <p style={animation(isInView, 2)}>
+            <h4 style={animation(isInView, 1.6)}>Development</h4>
+            <p style={animation(isInView, 1.8)}>
               Develop a suitable solution and knowledge
             </p>
           </span>
         </div>
         <div className="aboutUs__footer-item footer-item-3">
-          <BsBoxSeam style={animation(isInView, 1.5)} className="icon-box" />
+          <BsBoxSeam style={animation(isInView, 1.4)} className="icon-box" />
           <span>
-            <h4 style={animation(isInView, 1.75)}>Values</h4>
-            <p style={animation(isInView, 2)}>Deliver necessary values</p>
+            <h4 style={animation(isInView, 1.6)}>Values</h4>
+            <p style={animation(isInView, 1.8)}>Deliver necessary values</p>
           </span>
         </div>
       </div>

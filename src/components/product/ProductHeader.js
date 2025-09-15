@@ -21,13 +21,17 @@ const ProductHeader = (props) => {
 
   return (
     <header ref={ref} className="product__header">
-      <span className="product__header-image">
-        <img
-          style={animation(isInView, 0)}
-          src={props.image}
-          alt={`${props.title} Logo"`}
-        />
-      </span>
+      {props?.image ? (
+        <span className="product__header-image">
+          <img
+            style={animation(isInView, 0)}
+            src={props.image}
+            alt={`${props.title} Logo"`}
+          />
+        </span>
+      ) : (
+        ""
+      )}
       <div
         style={animation(isInView, 0.25)}
         className="product__header-content"

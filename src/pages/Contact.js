@@ -26,7 +26,7 @@ const Contact = () => {
               Find Us
             </h5>
             <iframe
-              style={animation(isInView, 0.25)}
+              style={animation(isInView, 0.2)}
               className="maps__iframe"
               title="Primary Address"
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d991.4491844390938!2d107.0445237!3d-6.2904254!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698e285e9447e5%3A0xa316d14ffc8fbd09!2sSSI%20Prima%20Mas!5e0!3m2!1sid!2sid!4v1660581271875!5m2!1sid!2sid"
@@ -38,14 +38,14 @@ const Contact = () => {
             ></iframe>
           </div>
           <div
-            style={animation(isInView, 0.5)}
+            style={animation(isInView, 0.4)}
             className="contact__main-address"
           >
-            <h5 style={animation(isInView, 0.5)} className="address__title">
+            <h5 style={animation(isInView, 0.4)} className="address__title">
               Our Address
             </h5>
             <div
-              style={animation(isInView, 0.75)}
+              style={animation(isInView, 0.6)}
               className="contact__main-address-item"
             >
               <h5>Head Office</h5>
@@ -56,7 +56,7 @@ const Contact = () => {
             </div>
 
             <div
-              style={animation(isInView, 1)}
+              style={animation(isInView, 0.8)}
               className="contact__main-address-item"
             >
               <h5>Showroom & Warehouse</h5>
@@ -67,17 +67,17 @@ const Contact = () => {
             </div>
           </div>
 
-          <div style={animation(isInView, 1.25)} className="contact__main-telp">
-            <h5 style={animation(isInView, 1.25)} className="telp__title">
+          <div style={animation(isInView, 1)} className="contact__main-telp">
+            <h5 style={animation(isInView, 1)} className="telp__title">
               Call Us
             </h5>
-            <div style={animation(isInView, 1.5)} className="telp__phone">
+            <div style={animation(isInView, 1.2)} className="telp__phone">
               <MdCall className="telp__phone-icon" />
               <p className="telp__phone-value">
                 Tel: +62 21 2956 6862, 2956 6861
               </p>
             </div>
-            <div style={animation(isInView, 1.5)} className="telp__phone">
+            <div style={animation(isInView, 1.2)} className="telp__phone">
               <MdPrint className="telp__phone-icon" />
               <p className="telp__phone-value">Fax: +62 21 2956 6860</p>
             </div>
